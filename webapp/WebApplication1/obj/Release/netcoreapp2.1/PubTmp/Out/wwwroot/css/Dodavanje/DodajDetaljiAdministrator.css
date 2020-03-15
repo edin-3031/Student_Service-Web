@@ -1,0 +1,12 @@
+﻿label, input {
+    margin: 3%;
+}
+
+#snimi, #return_now {
+    width: 30%;
+    margin-right: 3%;
+}
+
+input {
+    text-align: center;
+}

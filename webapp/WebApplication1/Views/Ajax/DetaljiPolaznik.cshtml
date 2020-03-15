@@ -1,0 +1,49 @@
+﻿@model WebApplication1.Models.VM.row;
+@{
+    ViewData["Title"] = "DetaljiPolaznik";
+
+    string polaznik = (string)ViewData["polaznik"];
+    int polaznikId = (int)ViewData["polaznikID"];
+}
+
+<h1 align="center" ; style="margin-top:3%; margin-bottom:5%;">Detalji polazni(ka/ce) @polaznik</h1>
+
+<table class="table table-striped">
+    <thead>
+        <td>Pohađa kurseve</td>
+        <td>Početak</td>
+        <td>Kraj</td>
+        <td>Obnavalja kurs</td>
+        <td>Broj obnavljanja</td>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.rows)
+        {
+            <tr>
+                <td>@x.kurs</td>
+                <td>@x.pocetak.Date.Day.@x.pocetak.Date.Month.@x.pocetak.Date.Year.</td> 
+                <td>@x.kraj.Date.Day.@x.kraj.Date.Month.@x.kraj.Date.Year.</td>
+                <td>@x.Obnavlja</td>
+                <td>@x.Broj_Obnavljanja</td>
+                <td><a class="btn btn-danger" id="ukloniDetalj_@x.pohadjaID">Ukolni</a></td>
+                <script>
+                    $("#ukloniDetalj_@x.pohadjaID").click(function (event) {
+                        $.get("/Ajax/UkloniDetaljPolaznik?id=@x.pohadjaID&polaznikID=@polaznikId", function (result) {
+                            $("#box").html(result);
+                        });
+                    });
+                </script>
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a class="btn btn-success" id="add_@polaznikId">Dodaj detalje</a>
+</center>
+<script>
+    $("#add_@polaznikId").click(function (result) {
+        $.get("/Ajax/DodajDetaljePolaznik?id=@polaznikId", function (event) {
+            $("#box").html(event);
+        });
+    });
+</script>

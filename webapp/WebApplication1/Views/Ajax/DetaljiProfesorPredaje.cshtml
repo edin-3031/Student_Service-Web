@@ -1,0 +1,60 @@
+﻿@model WebApplication1.Models.VM.RowProfPredajeVM;
+@{
+    ViewData["Title"] = "DetaljiProfesorPredaje";
+    string ime = (string)ViewData["prof_predaje"];
+    int id = (int)ViewData["prof_ID"];
+}
+
+<h1 align="center" ; style="margin-top:3%; margin-bottom:5%; background-color:rgba(0,0,0,0.1)">Detalji o predavanju</h1>
+
+<table class="table table-striped">
+    <thead>
+    <td>
+        <b>Zaduženi kursevi<b />
+    </td>
+    <td>
+        <b>Datum predavanja</b>
+    </td>
+    <td>
+        <b>Vrsta nastavne jedinice</b>
+    </td>
+    <td>
+        <b>Izvršeno održavanje</b>
+    </td>
+    <td>
+        <b>Opis</b>
+    </td>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.row)
+        {
+            <tr>
+                <td>@x.kurs</td>
+                <td>@x.datum_predavanja.Date.Day.@x.datum_predavanja.Date.Month.@x.datum_predavanja.Date.Year.</td>
+                <td>@x.vrsta</td>
+                <td>@x.odrzano</td>
+                <td>@x.opis</td>
+                <td>
+                    <a class="btn btn-danger" id="_ukloni_@x.predaje_id">Ukloni</a>
+                    <script>
+                        $("#_ukloni_@x.predaje_id").click(function (event) {
+                            $.get("/Ajax/UkloniPredavanjeDetalj?id=@x.predaje_id&prof_iD=@id", function (result) {
+                                $("#box_predaje").html(result);
+                            });
+                        });
+                    </script>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a class="btn btn-success" id="add_detail">Dodaj</a>
+</center>
+<script>
+    $("#add_detail").click(function (event) {
+        $.get("/Ajax/DodajDetaljePredavanja?id=" + @id, function (result) {
+            $("#box_predaje").html(result);
+        });
+    });
+</script>

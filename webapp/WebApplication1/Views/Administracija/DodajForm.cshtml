@@ -1,0 +1,89 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajAdministraciju.css" />
+@{
+    ViewData["Title"] = "DodajForm";
+}
+
+<h1>Dodaj administraciju</h1>
+
+<center>
+    <form action="Dodaj">
+        <table>
+            <tr>
+                <td><label>Ime</label></td>
+                <td><input type="text" name="ime" /></td>
+            </tr>
+            <tr>
+                <td><label>Prezime</label></td>
+                <td><input type="text" name="prezime" /></td>
+            </tr>
+
+            <tr>
+                <td><label>Mail</label></td>
+                <td><input type="text" name="mail" /></td>
+            </tr>
+            <tr>
+                <td><label>Datum rođenja</label></td>
+                <td><input type="date" name="datum_rodjenja" /></td>
+            </tr>
+            <tr>
+                <td><label>Datum zaposlenja</label></td>
+                <td><input type="date" name="datum_zaposlenja" /></td>
+            </tr>
+            <tr>
+                <td><label>Adresa</label></td>
+                <td><input type="text" name="adresa" /></td>
+            </tr>
+            <tr>
+                <td><label>Telefon</label></td>
+                <td><input type="text" name="telefon" /></td>
+            </tr>
+            <tr>
+                <td><label>Spol</label></td>
+                <td>
+                    <select name="spol" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="M">M</option>
+                    <option value="Ž">Ž</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Staž</label></td>
+                <td><input type="number" name="staz" /></td>
+            </tr>
+            <tr>
+                <td><label>Stalan zaposlenik</label></td>
+                <td>
+                    <select name="stalan_zaposlenik" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="DA">DA</option>
+                    <option value="NE">NE</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Kancelarija</label></td>
+                <td>
+                    <select name="kancelarija" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option>Kancelarija 1</option>
+                    <option>Kancelarija 2</option>
+                    <option>Kancelarija 3</option>
+                    <option>Kancelarija 4</option>
+                    <option>Kancelarija 5</option>
+                    <option>Kancelarija 6</option>
+                    <option>Kancelarija 7</option>
+                    <option>Kancelarija 8</option>
+                    <option>Kancelarija 9</option>
+                    <option>Kancelarija 10</option>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <button id="go" type="submit" class="btn btn-primary">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Administracija/Prikaz">Nazad</a>
+    </form>
+    <br />
+</center>

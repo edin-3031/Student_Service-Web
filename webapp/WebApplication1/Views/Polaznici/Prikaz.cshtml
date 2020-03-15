@@ -1,0 +1,111 @@
+﻿<link rel="stylesheet" href="~/css/Prikaz/PolaznikPrikaz.css" />
+<link rel="stylesheet" href="~/css/Poruke_Span.css" />
+@{
+    ViewData["Title"] = "Polaznici";
+    List<PrikazPolaznika> podaci = (List<PrikazPolaznika>)ViewData["Student"];
+
+    int brojac = 0;
+
+    string porukaGreska = (string)TempData["greska"];
+    string porukaUspjeh = (string)TempData["uspjesno"];
+}
+
+<h1>Polaznici</h1>
+
+@if (porukaGreska != null)
+{<center>
+        <div id="poruka">@porukaGreska</div>
+    </center>
+    <script>
+        $("#poruka").slideUp(1);
+        $("#poruka").slideDown(1500);
+        $("#poruka").delay(2000);
+        $("#poruka").slideUp(1500);
+    </script>
+}
+@if (porukaUspjeh != null)
+{
+    <center>
+        <div id="poruka2">@porukaUspjeh</div>
+    </center>
+    <script>
+        $("#poruka2").slideUp(1);
+        $("#poruka2").slideDown(1500);
+        $("#poruka2").delay(2000);
+        $("#poruka2").slideUp(1500);
+    </script>
+}
+
+<table class="table">
+    <thead>
+    <th>RB</th>
+    <th>Ime i prezime</th>
+    <th>Datum rođenja</th>
+    <th>Spol</th>
+    <th>Indeks</th>
+    <th>Mail</th>
+    <th>Telefon</th>
+    <th>Status</th>
+    <th>Način studija</th>
+    <th>Upisan semestar</th>
+    <th>Ovjeren semestar</th>
+    <th>Godina studija</th>
+    <th>Obnavlja godinu</th>
+    <th>Prosječna ocjena</th>
+    </thead>
+    <tbody>
+        @foreach (var x in podaci)
+        {
+            <tr>
+                <td>@(++brojac)</td>
+                <td>@x.ime @x.prezime</td>
+                <td>@x.datum_rodjenja.Date.Day.@x.datum_rodjenja.Date.Month.@x.datum_rodjenja.Date.Year.</td>
+                <td>@x.spol</td>
+                <td>@x.broj_dosijea</td>
+                <td>@x.mail</td>
+                <td>@x.telefon</td>
+                <td>@x.status</td>
+                <td>@x.nacin_studiranja</td>
+                <td>@x.upisan_semestar</td>
+                <td>@x.ovjeren_semestar</td>
+                <td>@x.godina_studija</td>
+                <td>@x.obnavlja_godinu</td>
+                <td>@x.prosjecna_ocjena</td>
+                <td>
+                    <a class="btn btn-info" href="UrediForm?id=@x.Polaznik_Id">Uredi</a>
+                </td>
+                <td>
+                    <a class="btn btn-warning" id="Detalji_@x.Polaznik_Id">Detalji</a>
+                    <script>
+                    $("#Detalji_@x.Polaznik_Id").click(function(event){
+                        $.get("/Ajax/DetaljiPolaznik?id=@x.Polaznik_Id", function(result){
+                            $("#box").html(result);
+                            $("#box").css("border", "5px solid black");
+                        });
+                    });
+                    </script>
+                </td>
+                <td>
+                    <a id="mouse_@x.Polaznik_Id" class="btn btn-danger" href="Ukloni?trazeni=@x.Polaznik_Id">Ukloni</a>
+                <td><span id="warning_@x.Polaznik_Id"></span></td>
+                @*<script>
+                        $("#mouse_@x.Polaznik_Id").mouseover(function (event) {
+                            $("#warning_@x.Polaznik_Id").html("PRVO UKLONITE DETALJE");
+                            $("#warning_@x.Polaznik_Id").css("border","1px solid red")
+                        });
+                        $("#mouse_@x.Polaznik_Id").mouseleave(function (event) {
+                            $("#warning_@x.Polaznik_Id").html("");
+                            $("#warning_@x.Polaznik_Id").css("border","0px")
+                        });
+                </script>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a class="btn btn-success" href="DodajForm">Dodaj polaznika</a><br /><br />
+</center>
+
+<div id="box">
+</div>

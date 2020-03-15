@@ -1,0 +1,67 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajUplata.css" />
+@{ 
+
+    var podaci = (List<Polaznik>)ViewData["Uplate_form"];
+    var podaci2 = (List<Administracija>)ViewData["Uplate_form2"];
+}
+
+<h1>Dodaj uplatu</h1>
+<center>
+    <form action="/Uplate/DodajUplatu">
+        <table>
+            <tr>
+                <td><label>Svrha</label></td>
+                <td><input type="text" name="svrha" /></td>
+            </tr>
+            <tr>
+                <td><label>Iznos</label></td>
+                <td><input type="text" name="iznos" /></td>
+            </tr>
+            <tr>
+                <td><label>Datum uplate</label></td>
+                <td><input type="datetime-local" name="datum_uplate" /></td>
+            </tr>
+            <tr>
+                <td><label>Ovjereno</label></td>
+                <td>
+                    <select name="ovjereno">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">---------------</option>
+                        <option value="DA">DA</option>
+                        <option value="NE">NE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Polaznik</label></td>
+                <td>
+                    <select name="polaznik">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">---------------</option>
+                        @foreach (Polaznik x in podaci)
+                        {
+                            <option value="@x.PolaznikID">@x.Ime @x.Prezime</option>
+                        }
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td><label>Evidentirao</label></td>
+                <td>
+                    <select name="administracija">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">---------------</option>
+                        @foreach (Administracija y in podaci2)
+                        {
+                            <option value="@y.AdministracijaID">@y.Ime @y.Prezime</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <button id="go" class="btn btn-primary" type="submit">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Uplate/PrikaziUplate">Nazad</a>
+    </form>
+</center>

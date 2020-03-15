@@ -1,0 +1,81 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajKurs.css" />
+@{
+    List<Kurs> podaci = (List<Kurs>)ViewData["kurs_id"];
+    List<Studijski_Program> podaci2 = (List<Studijski_Program>)ViewData["SP_id"];
+
+}
+
+<h1>Dodaj kurs</h1>
+
+<center>
+    <form action="/Kursevi/DodajKurs">
+        <table>
+            <tr>
+                <td>
+                    <label>Naziv</label>
+                </td>
+                <td>
+                    <input type="text" name="naziv" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>ECTS</label>
+                </td>
+                <td>
+                    <input type="text" name="ects" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Studijski program</label>
+                </td>
+                <td>
+                    <select name="studijskiProgram">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">---------------</option>
+                        @foreach (Studijski_Program x in podaci2)
+                        {
+                            <option value="@x.Studijski_programID">@x.Naziv</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Cijena</label>
+                </td>
+                <td>
+                    <input type="text" name="cijena" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Trajanje</label>
+                </td>
+                <td>
+                    <input type="text" name="trajanje" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Trazenost</label>
+                </td>
+                <td>
+                    <input type="text" name="Trazenost" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Cilj</label>
+                </td>
+                <td>
+                    <input type="text" name="cilj" />
+                </td>
+            </tr>
+        </table>
+    <br/>
+    <button id="go" class="btn btn-primary" type="submit">Snimi</button>
+    <a id="back" href="/Kursevi/PrikaziKurseve" class="btn btn-default">Nazad</a>
+    </form>
+</center>

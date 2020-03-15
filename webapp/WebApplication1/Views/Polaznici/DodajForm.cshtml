@@ -1,0 +1,134 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajPolaznika.css" />
+@{
+    ViewData["Title"] = "Dodaj polaznika";
+}
+
+<h1>Dodaj polaznika</h1>
+
+<center>
+    <form action="Dodaj">
+        <table>
+            <tr>
+                <td><label>Ime</label></td>
+                <td><input type="text" name="ime" /></td>
+            </tr>
+            <tr>
+                <td><label>Prezime</label></td>
+                <td><input type="text" name="prezime" /></td>
+            </tr>
+            <tr>
+                <td><label>Mail</label></td>
+                <td><input type="text" name="mail" /></td>
+            </tr>
+            <tr>
+                <td><label>Datum rođenja</label></td>
+                <td><input type="date" name="datum_rodjenja" /></td>
+            </tr>
+            <tr>
+                <td><label>Adresa</label></td>
+                <td><input type="text" name="adresa" /></td>
+            </tr>
+            <tr>
+                <td><label>Telefon</label></td>
+                <td><input type="text" name="telefon" /></td>
+            </tr>
+            <tr>
+                <td><label>Spol</label></td>
+                <td>
+                    <select name="spol" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="M">M</option>
+                    <option value="Ž">Ž</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Indeks</label></td>
+                <td><input type="text" name="broj_dosijea" /></td>
+            </tr>
+            <tr>
+                <td><label>Status</label></td>
+                <td>
+                    <select name="status" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="Aktivan">Aktivan</option>
+                    <option value="Neaktivan">Neaktivan</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Način studiranja</label></td>
+                <td>
+                    <select name="nacin_studiranja" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="IN-CLASS">IN-CLASS</option>
+                    <option value="DL">DL</option>
+                    <option value="Vanredan">Vanredan</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Upisani semestar</label></td>
+                <td>
+                    <select name="upisan_semestar" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Ovjereni semestar</label></td>
+                <td>
+                    <select type="text" name="ovjeren_semestar" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Godina upisa</label></td>
+                <td><input type="text" name="godina_upisa" /></td>
+            </tr>
+            <tr>
+                <td><label>Godina studija</label></td>
+                <td>
+                    <select name="godina_studija" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Obnavlja</label></td>
+                <td>
+                    <select name="obnavlja_godinu" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="DA">DA</option>
+                    <option value="NE">NE</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Prosječna ocjena</label></td>
+                <td><input type="text" name="prosjecna_ocjena" /></td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <button id="go" type="submit" class="btn btn-primary">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Polaznici/Prikaz">Nazad</a>
+    </form>
+    <br/>
+</center>

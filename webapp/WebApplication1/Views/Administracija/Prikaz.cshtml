@@ -1,0 +1,117 @@
+﻿<link rel="stylesheet" href="~/css/Prikaz/AdministracijaPrikaz.css"/>
+<link rel="stylesheet" href="~/css/Poruke_Span.css"/>
+@{
+        ViewData["Title"] = "Prikaz";
+
+        List<PrikazAdministracije> podaci = (List<PrikazAdministracije>)ViewData["administracija"];
+        int b = 0;
+
+        string porukaGreske = (string)TempData["Error"];
+
+        string porukaUspjeha = (string)TempData["Success"];
+}
+
+<h1>Administracija</h1>
+
+    @if (porukaGreske != null)
+    {   <center>
+            <div id="poruka">@porukaGreske</div>
+        </center>
+        <script>
+            $("#poruka").slideUp(1);
+            $("#poruka").slideDown(1500);
+            $("#poruka").delay(2000);
+            $("#poruka").slideUp(1500);
+        </script>
+    }
+    @if (porukaUspjeha != null)
+    {
+        <center>
+            <div id="poruka2">@porukaUspjeha</div>
+        </center>
+        <script>
+            $("#poruka2").slideUp(1);
+            $("#poruka2").slideDown(1500);
+            $("#poruka2").delay(2000);
+            $("#poruka2").slideUp(1500);
+        </script>
+    }
+
+<table class="table">
+    <thead>
+    <th>RB</th>
+    <th>Ime i prezime</th>
+    <th>Mail</th>
+    <th>Telefon</th>
+    <th>Adresa</th>
+    <th>Datum rođenja</th>
+    <th>Datum zaposlenja</th>
+    <th>spol</th>
+    <th>Staž</th>
+    <th>Stalni zaposlenik</th>
+    <th>Kancelarija</th>
+    </thead>
+    <tbody>
+        @foreach (var x in podaci)
+        {
+            <tr>
+                <td>@(++b)</td>
+
+                <td>@x.ime @x.prezime</td>
+
+                <td>@x.mail</td>
+
+                <td>@x.telefon</td>
+
+                <td>@x.adresa</td>
+
+                <td>@x.datum_rodjenja.Date.Day.@x.datum_rodjenja.Date.Month.@x.datum_rodjenja.Date.Year.</td>
+
+                <td>@x.datum_zaposlenja.Date.Day.@x.datum_zaposlenja.Date.Month.@x.datum_zaposlenja.Date.Year.</td>
+
+                <td>@x.spol</td>
+
+                <td>@x.staz</td>
+
+                <td>@x.stalan_zapolsenik</td>
+
+                <td>@x.kancelarija</td>
+
+                <td><a href="UrediForm?id=@x.administracija_Id" class="btn btn-info">Uredi</a></td>
+
+                <td>
+                    <a class="btn btn-warning" id="Detalji__@x.administracija_Id">Detalji</a>
+                    <script>
+                    $("#Detalji__@x.administracija_Id").click(function (event) {
+                        $.get("/Ajax/DetaljiAdministracija?id=@x.administracija_Id", function (result) {
+                            $("#box2").html(result);
+                            $("#glavni").css("border","5px solid black");
+                        });
+                    });
+                    </script>
+                </td>
+                <td>
+                    <a class="btn btn-danger" href="/Administracija/Ukloni?id=@x.administracija_Id" id="brisanje_@x.administracija_Id">Ukloni</a>
+                </td>
+                <td>
+                    <span id="poruka_@x.administracija_Id"></span>
+                </td>
+                <script>
+                    $("#brisanje_@x.administracija_Id").mouseover(function () {
+                        $("#poruka_@x.administracija_Id").html("PRVO UKLONITE DETALJE I IZMIJENITE UPLATE");
+                    });
+                    $("#brisanje_@x.administracija_Id").mouseleave(function () {
+                        $("#poruka_@x.administracija_Id").html("");
+                    });
+                </script>
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a href="DodajForm" class="btn btn-success">Dodaj administraciju</a><br /><br />
+</center>
+<div id="glavni">
+    <div id="box2">
+    </div>
+</div>

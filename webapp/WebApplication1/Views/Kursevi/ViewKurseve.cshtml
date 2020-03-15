@@ -1,0 +1,98 @@
+﻿<link rel="stylesheet" href="~/css/Prikaz/KurseviPrikaz.css" />
+<link rel="stylesheet" href="~/css/Poruke_Span.css" />
+@{
+    ViewData["Title"] = "ViewKurseve";
+
+    List<PrikazKurseva> podaci = (List<PrikazKurseva>)ViewData["kurs_id"];
+
+    int b = 1;
+
+    string porukaUspjeh = (string)TempData["uspjesno"];
+
+    string porukaGreska = (string)TempData["greska"];
+}
+
+<h1>Kursevi</h1>
+
+@if (porukaGreska != null)
+{<center>
+        <div id="poruka">@porukaGreska</div>
+    </center>
+    <script>
+        $("#poruka").slideUp(1);
+        $("#poruka").slideDown(1500);
+        $("#poruka").delay(2000);
+        $("#poruka").slideUp(1500);
+    </script>
+}
+@if (porukaUspjeh != null)
+{
+    <center>
+        <div id="poruka2">@porukaUspjeh</div>
+    </center>
+    <script>
+        $("#poruka2").slideUp(1);
+        $("#poruka2").slideDown(1500);
+        $("#poruka2").delay(2000);
+        $("#poruka2").slideUp(1500);
+    </script>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>RB</th>
+            <th>Naziv</th>
+            <th>Studijski program</th>
+            <th>ECTS</th>
+            <th>Cijena</th>
+            <th>Trajanje</th>
+            <th>Traženost</th>
+            <th>Cilj</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in podaci)
+        {
+            <tr>
+                <td>@(b++)</td>
+                <td>@x.Naziv</td>
+                <td>@x.Studijski_program</td>
+                <td>@x.ECTS</td>
+                <td>@x.Cijena</td>
+                <td>@x.Trajanje</td>
+                <td>@x.Trazenost</td>
+                <td>@x.Cilj</td>
+                <td>
+                    <a class="btn btn-info" href="UrediForm?id=@x.KursID">Uredi</a>
+                    <a class="btn btn-warning" id="Detalji_@x.KursID">Detalji</a>
+                    <script>
+                        $("#Detalji_@x.KursID").click(function(){
+                            $.get("/Ajax/DetaljiKurs?SP_id=@x.SP_id&kursId=@x.KursID", function (result) {
+                                $("#box").html(result);
+                                $("#box").css("border","5px solid black");
+                            });
+                        });
+                    </script>
+                    <a class="btn btn-danger" id="brisanje_@x.KursID" href="/Kursevi/UkoniKurs?TrazeniKurs=@x.KursID">Ukloni</a>
+                </td>
+                <td>
+                    <span id="poruka_@x.KursID"></span>
+                </td>
+                @*<script>
+                    $("#brisanje_@x.KursID").mouseover(function () {
+                        $("#poruka_@x.KursID").html("PRVO UKLONITE KURS IZ DETALJA PROFESORA, POLAZNIKA I TESTA");
+                    });
+                    $("#brisanje_@x.KursID").mouseleave(function () {
+                        $("#poruka_@x.KursID").html("");
+                    });
+                </script>*@
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a class="btn btn-success" href="/Kursevi/DodajKursForm">Dodaj kurs</a><br /><br />
+</center>
+<div id="box">
+</div>

@@ -1,0 +1,51 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajTest.css" />
+@using WebApplication1.Models.VM
+@model TestoviDodavanjeVM
+@{
+    ViewData["Title"] = "DodajForm";
+}
+
+<h1>Dodaj test</h1>
+<center>
+    <form action="/Testovi/Dodaj">
+        <table class="table">
+            <tr>
+                <td>
+                    <label>Kurs</label>
+                </td>
+                <td>
+                    <select name="kursId">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">--------------</option>
+                        @foreach (var x in Model.kursevi)
+                        {
+                            <option value="@x.KursID">@x.Naziv</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Broj pitanja: </label>
+                </td>
+                <td><input type="number" name="brojPitanja" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Trajanje: </label>
+                </td>
+                <td><input type="number" name="trajanje" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Maksimalno bodova: </label>
+                </td>
+                <td><input type="number" name="bodovi" /></td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <input id="go" class="btn btn-primary" type="submit" value="Snimi" />
+        <a id="back" class="btn btn-default" href="/Testovi/Prikaz">Nazad</a>
+    </form>
+</center>

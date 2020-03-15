@@ -1,0 +1,108 @@
+﻿body, head {
+    height: 100%;
+    width: 100%;
+    /*background-color: lightgray;*/
+    background-image:url('/images/main_back.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+table{
+    margin-top:10%;
+}
+td {
+    text-align: center;
+    padding: 7%;
+    width: 1%;
+    color: lightgray;
+    border: 10px solid lightgray;
+}
+a{
+    color:lightgray;
+}
+    a:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+    }
+h1{
+    margin-top:7%;
+    font-family:Consolas;
+    font-size:400%;
+}
+#prvi_red, #drugi_red {
+    height: 100%;
+    width: 100%;
+    /*border: 1px solid black;*/
+    margin: 4%;
+}
+
+#prvi, #drugi, #treci, #prvi_drugi, #drugi_drugi, #treci_drugi {
+    height: 50%;
+    width: 25%;
+    border: 1px solid blue;
+    margin: 3%;
+    display: inline-block;
+    padding:8%;
+}
+#prvi {
+    background-image: url('/images/Profesori.png');
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-color: cornflowerblue;
+    opacity: 0.9;
+}
+#drugi {
+    background-image: url('/images/Administracija.png');
+    background-size: 79%;
+    background-repeat: no-repeat;
+    background-color: cornflowerblue;
+    opacity: 0.9;
+}
+#treci {
+    background-image: url('/images/Student.jpg');
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-color: cornflowerblue;
+    opacity: 0.9;
+}
+#prvi_drugi {
+    background-image: url('/images/Testovi.png');
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-color: cornflowerblue;
+    opacity: 0.9;
+}
+#drugi_drugi {
+    background-image: url('/images/Kursevi.png');
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-color: cornflowerblue;
+    opacity: 0.9;
+}
+#treci_drugi {
+    background-image: url('/images/Uplate.jpg');
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-color: cornflowerblue;
+    opacity: 0.9;
+}
+#prvi_red, #drugi_red{
+    font-size:200%;
+    font-family:Consolas;
+}
+#drugi a{
+    margin-left:-50%;
+}
+
+#prvi, #drugi, #treci, #prvi_drugi, #drugi_drugi, #treci_drugi {
+    border-radius: 20px;
+    border:0px;
+    border-bottom: 3px solid #efef;
+    border-right: 3px solid #efef;
+}
+
+    #prvi:hover, #drugi:hover, #treci:hover, #prvi_drugi:hover, #drugi_drugi:hover, #treci_drugi:hover {
+        border-bottom: 3px solid lightblue;
+        border-right: 3px solid lightblue;
+        box-shadow:20px 30px 40px -15px;
+    }

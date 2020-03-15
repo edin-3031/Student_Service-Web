@@ -1,0 +1,127 @@
+﻿<link rel="stylesheet" href="~/css/Uređivanje/UrediAdministracija.css" />
+@{
+    Administracija podaci = (Administracija)ViewData["uredi"];
+}
+
+<h1>Uredi podatke administracije</h1>
+
+<form action="/Administracija/Uredi">
+    <input hidden="hidden" name="id" value="@podaci.AdministracijaID" />
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <label>Ime</label>
+                </td>
+                <td>
+                    <input id="ime_" type="text" name="ime" value="@podaci.Ime" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Prezime</label>
+                </td>
+                <td>
+                    <input id="prezime_" type="text" name="prezime" value="@podaci.Prezime" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Mail</label>
+                </td>
+                <td>
+                    <input type="text" name="mail" value="@podaci.Mail" />
+                </td>
+            <tr>
+                <td>
+                    <label>Datum rođenja</label>
+                </td>
+                <td>
+                    <input type="datetime" name="datum_rodjenja" value="@podaci.Datum_Rodjenja" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Datum zaposlenja</label>
+                </td>
+                <td>
+                    <input type="datetime" name="datum_zaposlenja" value="@podaci.Datum_Zaposlenja" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Adresa</label>
+                </td>
+                <td>
+                    <input type="text" name="adresa" value="@podaci.Adresa" />
+                </td>
+            <tr>
+            <tr>
+                <td>
+                    <label>Telefon</label>
+                </td>
+                <td>
+                    <input type="text" name="telefon" value="@podaci.Telefon" />
+                </td>
+            <tr>
+            <tr>
+                <td>
+                    <label>Spol</label>
+                </td>
+                <td>
+                    <select name="spol">
+                        <option value="@podaci.Spol">@podaci.Spol</option>
+                        <option disabled="disabled">--</option>
+                        <option value="M">M</option>
+                        <option value="Ž">Ž</option>
+                    </select>
+                </td>
+            <tr>
+            <tr>
+                <td>
+                    <label>Staž</label>
+                </td>
+                <td>
+                    <input type="text" name="staz" value="@podaci.Telefon" />
+                </td>
+            <tr>
+            <tr>
+                <td>
+                    <label>Stalan zaposlenik</label>
+                </td>
+                <td>
+                    <select name="stalan_zaposlenik">
+                        <option value="@podaci.Stalan_Zapolsenik">@podaci.Stalan_Zapolsenik</option>
+                        <option disabled="disabled">--</option>
+                        <option value="DA">DA</option>
+                        <option value="NE">NE</option>
+                    </select>
+                </td>
+            <tr>
+            <tr>
+                <td>
+                    <label>Kancelarija</label>
+                </td>
+                <td>
+                    <select name="kancelarija">
+                        <option>@podaci.Kancelarija</option>
+                        <option disabled="disabled">-------------------</option>
+                        <option>Kancelarija 1</option>
+                        <option>Kancelarija 2</option>
+                        <option>Kancelarija 3</option>
+                        <option>Kancelarija 4</option>
+                        <option>Kancelarija 5</option>
+                        <option>Kancelarija 6</option>
+                        <option>Kancelarija 7</option>
+                        <option>Kancelarija 8</option>
+                        <option>Kancelarija 9</option>
+                        <option>Kancelarija 10</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <button id="go" type="submit" class="btn btn-primary">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Administracija/Prikaz">Nazad</a>
+    </center>
+</form>

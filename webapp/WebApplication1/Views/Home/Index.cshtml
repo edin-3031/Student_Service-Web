@@ -1,0 +1,58 @@
+﻿@using WebApplication1.Models.VM
+@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+
+    string error_poruka=(string)ViewData["error_poruka"];
+}
+<link rel="stylesheet" href="~/css/LoginStyle.css" />
+<center>
+    <form action="/KorisnickiNalog/Login">
+        <div id="title">
+            <h1>IT Academy</h1>
+        </div>
+        <div id="box">
+            <table>
+                <tr>
+                    <td>
+                        <center>
+                            <label>Korisničko ime</label>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @*<input type="text" class="input-group" />*@
+                        <input asp-for="Username" />
+                        <span asp-validation-for="Username"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <label>Šifra</label>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @*<input type="password" class="input-group" />*@
+                        <input asp-for="Password" />
+                        <span asp-validation-for="Password"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br /><br />    
+        <input id="submit" type="submit" class="btn btn-primary" value="Prijava" />
+
+        @if (error_poruka != null)
+        {
+            <br />
+            <div class="alert alert-danger">
+                <p>@error_poruka</p>
+            </div>
+        }
+    </form>
+</center>

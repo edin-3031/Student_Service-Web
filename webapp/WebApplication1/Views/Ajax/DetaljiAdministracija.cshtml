@@ -1,0 +1,57 @@
+﻿@model WebApplication1.Models.VM.adminROW
+@{
+    ViewData["Title"] = "DetaljiAdministracija";
+
+    string ime = (string)ViewData["admin"];
+    int id_admin = (int)ViewData["id_admin"];
+}
+
+<h1 align="center" ; style="margin-top:3%; margin-bottom:5%;">Detalji uposleni(ka/ce) @ime</h1>
+
+<table class="table table-striped">
+    <thead>
+    <td>Akademije u kojoj radi</td>
+    <td>Broj sati rada u sedmici</td>
+    <td>Plata (KM)</td>
+    <td>Vrsta ugovora</td>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.row)
+        {
+            <tr>
+                <td>
+                    @x.Akademija
+                </td>
+                <td>
+                    @x.broj_sati_u_sedmici
+                </td>
+                <td>
+                    @x.plata
+                </td>
+                <td>
+                    @x.vrsta_ugovora
+                </td>
+                <td>
+                    <a class="btn btn-danger" id="uklanjanje_@x.rad_id">Ukloni</a>
+                    <script>
+                            $("#uklanjanje_@x.rad_id").click(function () {
+                                $.get("/Ajax/UkloniDetaljeAdministracijaRadi?id=@x.rad_id&&admin_id=@id_admin", function (event) {
+                                    $("#box2").html(event);
+                                });
+                            });
+                    </script>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a id="DodajNovi" class="btn btn-success">Dodaj</a>
+</center>
+<script>
+    $("#DodajNovi").click(function () {
+        $.get("/Ajax/DodajRadAdministrator?idAdmin=@id_admin", function (result) {
+            $("#box2").html(result);
+        });
+    });
+</script>

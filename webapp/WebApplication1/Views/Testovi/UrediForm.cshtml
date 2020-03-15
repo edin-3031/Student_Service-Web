@@ -1,0 +1,56 @@
+﻿<link rel="stylesheet" href="~/css/Uređivanje/UrediTest.css" />
+
+@{
+    Testovi podaci = (Testovi)ViewData["Uredi"];
+
+    string KursNaziv = (string)ViewData["naziv"];
+    int KursID = (int)ViewData["id"];
+
+}
+
+<h1>Uredi podatke testa</h1>
+
+<form action="/Testovi/Uredi">
+    <center>
+        <input type="text" hidden="hidden" name="id" value="@podaci.TestID" />
+        <input type="text" hidden="hidden" name="kursId" value="@KursID" />
+        <table>
+            <tr>
+                <td>
+                    <label>Kurs</label>
+                </td>
+                <td>
+                    <input id="kurs_" type="text" value="@KursNaziv" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Broj pitanja</label>
+                </td>
+                <td>
+                    <input type="text" name="brojPitanja" value="@podaci.Broj_Pitanja" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Trajanje</label>
+                </td>
+                <td>
+                    <input type="text" name="trajanje" value="@podaci.Trajanje" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Maksimalno bodova</label>
+                </td>
+                <td>
+                    <input type="text" name="bodovi" value="@podaci.Maksimalan_Broj_Bodova" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <button id="go" class="btn btn-primary">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Testovi/Prikaz">Nazad</a>
+    </center>
+</form>

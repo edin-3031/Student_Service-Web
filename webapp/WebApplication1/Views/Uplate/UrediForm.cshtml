@@ -1,0 +1,82 @@
+﻿<link rel="stylesheet" href="~/css/Uređivanje/UrediUplata.css" />
+@using WebApplication1.Models.VM
+@model UrediFormVM
+@{
+    Uplata podaci = (Uplata)ViewData["Uredi"];
+}
+
+<h1>Uredi podatke uplate</h1>
+
+    <center>
+
+        <form action="/Uplate/Uredi">
+            <input type="text" name="id" value="@podaci.UplataID" hidden="hidden" />
+            <table>
+                <tr>
+                    <td>
+                        <label>Svrha</label>
+                    </td>
+                    <td>
+                        <input name="svrha" type="text" value="@podaci.Svrha" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Iznos</label>
+                    </td>
+                    <td>
+                        <input name="iznos" type="text" value="@podaci.Iznos" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Datum uplate</label>
+                    </td>
+                    <td>
+                        <input name="datum_uplate" type="datetime" value="@podaci.Datum_uplate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Ovjereno</label>
+                    </td>
+                    <td>
+                        <select name="ovjereno">
+                            <option value=@podaci.Ovjereno>@podaci.Ovjereno</option>
+                            <option disabled="disabled">----</option>
+                            <option value="DA">DA</option>
+                            <option value="NE">NE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Polaznik</label>
+                    </td>
+                    <td>
+                        <input type="text" readonly="readonly" name="polaznik" value="@podaci.Polaznik_ID_FK" hidden="hidden" />
+                        <input type="text" readonly="readonly" value="@podaci.Polaznik_ID.Ime @podaci.Polaznik_ID.Prezime" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="adminName">Administracija</label>
+                    </td>
+                    <td>
+                        <select name="administracija">
+                            <option value="@podaci.Administracija_ID_FK">@podaci.Administracija_ID.Ime @podaci.Administracija_ID.Prezime</option>
+                            <option disabled="disabled">----------------------</option>
+                            @foreach (var x in Model.listaAdministracije)
+                            {
+                                <option value="@x.AdministracijaID">@x.Ime @x.Prezime</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <button id="go" class="btn btn-primary" type="submit">Snimi</button>
+            <a id="back" class="btn btn-default" href="/Uplate/PrikaziUplate">Nazad</a>
+        </form>
+    </center>

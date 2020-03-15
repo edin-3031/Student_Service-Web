@@ -1,0 +1,78 @@
+﻿<link rel="stylesheet" href="~/css/Uređivanje/UrediKursevi.css" />
+@{
+    Kurs podaci = (Kurs)ViewData["uredi"];
+    string nazivSP = (string)ViewData["naziv"];
+}
+
+
+<h1>Uredi podatke kursa</h1>
+
+
+<form action="/Kursevi/Uredi">
+    <center>
+        <input type="text" hidden="hidden" name="studijskiProgram" value="@podaci.Studijski_Program_ID_FK" />
+        <input type="text" hidden="hidden" name="id" value="@podaci.KursID" />
+        <table>
+            <tr>
+                <td>
+                    <label>Naziv</label>
+                </td>
+                <td>
+                    <input id="kurs_" type="text" readonly="readonly" name="naziv" value="@podaci.Naziv" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Studijski program</label>
+                </td>
+                <td>
+                    <input id="sp_" type="text" readonly="readonly" value="@nazivSP"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>ECTS bodova</label>
+                </td>
+                <td>
+                    <input type="text" name="ects" value="@podaci.ECTS" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Cijena</label>
+                </td>
+                <td>
+                    <input type="text" name="cijena" value="@podaci.Cijena" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Trajanje</label>
+                </td>
+                <td>
+                    <input type="text" name="trajanje" value="@podaci.Trajanje" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Traženost</label>
+                </td>
+                <td>
+                    <input type="text" name="trazenost" value="@podaci.Trazenost" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Cilj</label>
+                </td>
+                <td>
+                    <input type="text" name="cilj" value="@podaci.Cilj" />
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <button id="go" class="btn btn-primary" type="submit">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Kursevi/PrikaziKurseve/">Nazad</a>
+    </center>
+</form>

@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+    string ime = (string)ViewData["ime"];
+    string poruka = (string)ViewData["Message"];
+    Layout = null;
+}
+@*<h2>@ViewData["Title"]</h2>*@
+<h1 style="font-weight:bold;">Čestitamo</h1>
+
+
+<h3>
+    Poštovani, @ime uspještno ste aktivirali vaš račun. Potrebne informacije smo Vam poslali na Vaš e-Mail.
+
+    Za logiranje i dalje korištenje aplikacija, kliknite <a href="/Home/Index">ovdje</a>
+</h3>

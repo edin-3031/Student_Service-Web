@@ -1,0 +1,39 @@
+﻿@model WebApplication1.Models.VM.detaljiKursVM;
+@{
+    ViewData["Title"] = "Detalji";
+
+    string kurs = (string)ViewData["kurs"];
+
+}
+
+<h1 align="center"; style="margin-top:3%; margin-bottom:5%;">Detalji kursa @kurs</h1>
+    <table class="table table-striped">
+        <thead>
+            <td>
+                <i>Studijski program</i>
+            </td>
+            <td>
+                <i>Trajanje (sedmica)</i>
+            </td>
+            <td>
+                <i>Akademija</i>
+            </td>
+            <td>
+                <i>Cijena (KM)</i>
+            </td>
+        </thead>
+        <tbody>
+            <td>
+                @Model.sp_naziv
+            </td>
+            <td>
+                @Model.trajanje
+            </td>
+            <td>
+                @Model.akademija
+            </td>
+            <td>
+                @Model.cijena
+            </td>
+        </tbody>
+    </table>

@@ -1,0 +1,22 @@
+﻿label, input {
+    margin: 3%;
+}
+
+#go, #back {
+    width: 30%;
+    margin-right: 3%;
+}
+
+input {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 5%;
+}
+
+#kurs_{
+    border:0px;
+}

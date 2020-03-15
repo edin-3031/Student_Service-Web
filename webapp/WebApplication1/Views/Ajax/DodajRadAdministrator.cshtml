@@ -1,0 +1,92 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajDetaljiAdministrator.css" />
+@model WebApplication1.Models.VM.DodajDetaljeRadiVM
+@{
+    ViewData["Title"] = "DodajRadAdministrator";
+
+    int admin_ID = (int)ViewData["_id_"];
+}
+
+<center>
+    <h2>Dodaj detalje rada</h2>
+
+    <form id="add_form">
+        <input name="radnikID" value="@admin_ID" hidden="hidden" />
+        <table>
+            <tr>
+                <td>
+                    <label>Akademija</label>
+                </td>
+                <td>
+                    <select name="akademijaID">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">-------------------</option>
+                        @foreach (var p in Model.akademije)
+                        {
+                            <option value="@p.AkademijaID">@p.Naziv</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Broj sati u sedmici
+                    </label>
+                </td>
+                <td>
+                    <input type="number" name="broj_sati" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Plata
+                    </label>
+                </td>
+                <td>
+                    <input name="plata" type="number" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Vrsta ugovora
+                    </label>
+                </td>
+                <td>
+                    <select name="ugovor">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">-------------------</option>
+                        <option value="Stalni">STALNI</option>
+                        <option value="Privremeni">PRIVREMENI</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br />
+    <br />
+    <a id="snimi" class="btn btn-primary">Snimi</a>
+    <a id="return_now" class="btn btn-default">Nazad</a>
+    <script>
+        $("#snimi").click(function () {
+            var forma = $("#add_form");
+            $.ajax({
+                type: "POST",
+                url: "/Ajax/SnimiRadAdministracija",
+                data: forma.serialize(),
+                success: function (event) {
+                    $.get("/Ajax/DetaljiAdministracija?id=@admin_ID", function (result) {
+                        $("#box2").html(result);
+                    });
+                }
+            });
+        });
+
+        $("#return_now").click(function () {
+            $.get("/Ajax/DetaljiAdministracija?id=@admin_ID", function (result) {
+                $("#box2").html(result);
+            });
+        })
+    </script>
+</center>

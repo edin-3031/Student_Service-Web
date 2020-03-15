@@ -1,0 +1,312 @@
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.deps.json
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.json
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.dev.json
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csprojAssemblyReference.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csproj.CoreCompileInputs.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfoInputs.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfo.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.input.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.output.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorCoreGenerate.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\DodajForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\Prikaz.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\UrediForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiAdministracija.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiKurs.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiPolaznik.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiProfesorPredaje.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DeteljiProfesorRadi.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePolaznik.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePredavanja.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljeRadi.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajRadAdministrator.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\About.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Contact.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\KorisnickiNalog\Index.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\UrediForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseve.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseveForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\DodajForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\Prikaz.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\UrediForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\DodajForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\Prikaz.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\UrediForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\DodajForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\Prikaz.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\UrediForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\UrediForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplate.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplateForm.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.pdb
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csproj.CopyComplete
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\libman.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.deps.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.dev.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csprojAssemblyReference.cache
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cache
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfoInputs.cache
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfo.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.input.cache
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.output.cache
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorCoreGenerate.cache
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiAdministracija.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiKurs.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiPolaznik.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiProfesorPredaje.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DeteljiProfesorRadi.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePolaznik.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePredavanja.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljeRadi.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajRadAdministrator.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\KorisnickiNalog\Index.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseve.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseveForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplate.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplateForm.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cache
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csproj.CopyComplete
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csprojAssemblyReference.cache
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cache
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfoInputs.cache
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfo.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\libman.json
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.deps.json
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.json
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.dev.json
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.input.cache
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.output.cache
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorCoreGenerate.cache
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiAdministracija.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiKurs.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiPolaznik.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiProfesorPredaje.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DeteljiProfesorRadi.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePolaznik.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePredavanja.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljeRadi.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajRadAdministrator.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\KorisnickiNalog\Index.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseve.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseveForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplate.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplateForm.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cache
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cs
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\Edin\Desktop\Prva verzija\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csproj.CopyComplete
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\libman.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.deps.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.dev.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cache
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfoInputs.cache
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfo.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.input.cache
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.output.cache
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorCoreGenerate.cache
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiAdministracija.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiKurs.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiPolaznik.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiProfesorPredaje.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DeteljiProfesorRadi.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePolaznik.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePredavanja.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljeRadi.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajRadAdministrator.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\KorisnickiNalog\Index.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseve.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseveForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\DodajForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\Prikaz.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\UrediForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplate.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplateForm.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cache
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csproj.CopyComplete
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csprojAssemblyReference.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\appsettings.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\libman.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.deps.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.runtimeconfig.dev.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csprojAssemblyReference.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorAssemblyInfo.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfoInputs.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.AssemblyInfo.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.input.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.TagHelpers.output.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorCoreGenerate.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\DodajForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\Prikaz.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Administracija\UrediForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiAdministracija.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiKurs.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiPolaznik.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DetaljiProfesorPredaje.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DeteljiProfesorRadi.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePolaznik.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljePredavanja.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajDetaljeRadi.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Ajax\DodajRadAdministrator.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\About.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Contact.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\KorisnickiNalog\Index.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\UrediForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseve.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Kursevi\ViewKurseveForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\DodajForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\Prikaz.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Polaznici\UrediForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\DodajForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\Prikaz.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Profesori\UrediForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\DodajForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\Prikaz.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Testovi\UrediForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\UrediForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplate.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Uplate\ViewUplateForm.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.RazorTargetAssemblyInfo.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.pdb
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\WebApplication1\obj\Debug\netcoreapp2.2\WebApplication1.csproj.CopyComplete

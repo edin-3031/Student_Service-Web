@@ -1,0 +1,56 @@
+﻿@model WebApplication1.Models.VM.adminROW;
+@{
+    ViewData["Title"] = "DeteljiProfesorRadi";
+    string ime = (string)ViewData["prof_radi"];
+    int ID = (int)ViewData["prof_id"];
+}
+<h1 align="center" style="background-color:rgba(0,0,0,0.1)">Detalji o profesor(u/ici) <b>@ime</b></h1>
+<hr style="width:99.8%; border:2px solid black;" />
+<h1 align="center"; style="margin-top:3%; margin-bottom:5%; background-color:rgba(0,0,0,0.1)">Detalji o radu</h1>
+
+<table class="table table-striped">
+    <thead>
+        <td>
+            <b>Akademije u koje radi</b>
+        </td>
+        <td>
+            <b>Broj radnih sati u sedmici</b>
+        </td>
+        <td>
+            <b>Iznos plate (KM)</b>
+        </td>
+        <td>
+            <b>Vrsta ugovora</b>
+        </td>
+    </thead>
+    <tbody>
+        @foreach(var x in Model.row)
+        {
+            <tr>
+                <td>@x.Akademija</td>
+                <td>@x.broj_sati_u_sedmici</td>
+                <td>@x.plata</td>
+                <td>@x.vrsta_ugovora</td>
+                <td><a class="btn btn-danger" id="remove_detail_@x.rad_id">Ukloni</a>
+                    <script>
+                        $("#remove_detail_@x.rad_id").click(function (event) {
+                            $.get("/Ajax/UkloniDetaljeRadi?id=@x.rad_id&prof_id=@x.profesor_id", function (result) {
+                                $("#box_radi").html(result);
+                            });
+                        });
+                    </script>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a class="btn btn-success" id="addDetaildWork_@ID">Dodaj</a>
+</center>
+<script>
+    $("#addDetaildWork_@ID").click(function (event) {
+        $.get("/Ajax/DodajDetaljeRadi?id=@ID", function (result) {
+            $("#box_radi").html(result);
+        });
+    });
+</script>

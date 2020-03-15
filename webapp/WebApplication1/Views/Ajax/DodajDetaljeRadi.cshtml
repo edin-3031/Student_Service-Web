@@ -1,0 +1,94 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajDetaljiRad.css" />
+@model WebApplication1.Models.VM.DodajDetaljeRadiVM
+@{
+    ViewData["Title"] = "DodajDetaljeRadi";
+    int begin = (int)ViewData["id_back"];
+}
+
+<center>
+    <h2>Dodaj detalje rada</h2>
+
+
+    <form id="form_add_work">
+        <input type="text" name="ID" value="@Model.radnikID" hidden="hidden" />
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        Akademija
+                    </label>
+                </td>
+                <td>
+                    <select name="akademijaID">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">-------------------</option>
+                        @foreach (var s in Model.akademije)
+                        {
+                            <option value="@s.AkademijaID">@s.Naziv</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Broj sati u sedmici
+                    </label>
+                </td>
+                <td>
+                    <input type="number" name="broj_sati" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Plata
+                    </label>
+                </td>
+                <td>
+                    <input type="number" name="plata" step="any" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Vrsta ugovora
+                    </label>
+                </td>
+                <td>
+                    <select name="ugovor">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">-------------------</option>
+                        <option value="Stalni">STALNI</option>
+                        <option value="Privremeni">PRIVREMENI</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br />
+    <br />
+    <a class="btn btn-primary" id="save_work">Snimi</a>
+    <a class="btn btn-default" id="Back_Work">Nazad</a>
+
+    <script>
+        $("#save_work").click(function (event) {
+            var form = $("#form_add_work");
+            $.ajax({
+                type: "POST",
+                url: "/Ajax/SnimiDetaljeRada",
+                data: form.serialize(),
+                success: function (result) {
+                    $("#box_radi").html(result);
+                }
+            });
+        });
+
+        $("#Back_Work").click(function (event) {
+            $.get("/Ajax/DeteljiProfesorRadi?id=@begin", function (result) {
+                $("#box_radi").html(result);
+            });
+        });
+
+    </script>
+</center>

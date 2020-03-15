@@ -1,0 +1,52 @@
+﻿<link rel="stylesheet" href="~/css/Prikaz/TestPrikaz.css" />
+<link rel="stylesheet" href="~/css/Poruke_Span.css" />
+
+@using WebApplication1.Models.VM
+@model podaciTestPrikazVM
+@{
+    ViewData["Title"] = "Prikaz";
+    int b = 1;
+
+    string porukaUspjeh = (string)TempData["uspjesno"];
+}
+<h1>Testovi</h1>
+
+@if (porukaUspjeh != null)
+{
+    <center>
+        <div id="poruka2">@porukaUspjeh</div>
+    </center>
+    <script>
+        $("#poruka2").slideUp(1);
+        $("#poruka2").slideDown(1500);
+        $("#poruka2").delay(2000);
+        $("#poruka2").slideUp(1500);
+    </script>
+}
+
+<table class="table table-striped">
+    <thead>
+    <th>RB</th>
+    <th>Kurs</th>
+    <th>Broj pitanja</th>
+    <th>Trajanje (minuta)</th>
+    <th>Maksimalno bodova</th>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.row)
+        {
+            <tr>
+                <td><b>@(b++)</b></td>
+                <td>@x.kurs</td>
+                <td>@x.broj_pitanja</td>
+                <td>@x.trajanje</td>
+                <td>@x.max_bodova</td>
+                <td><a href="/Testovi/UrediForm?id=@x.testId" class="btn btn-info">Uredi</a></td>
+                <td><a href="/Testovi/Brisi?id=@x.testId" class="btn btn-danger">Ukloni</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a href="/Testovi/DodajForm" class="btn btn-success">Dodaj test</a>
+</center>

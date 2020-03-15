@@ -1,0 +1,96 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajDetaljiPolaznik.css" />
+@model WebApplication1.Models.VM.detaljiPolaznikPohadjaVM
+@{
+    ViewData["Title"] = "DodajDetaljePolaznik";
+
+    Polaznik polaznik = (Polaznik)ViewData["polaznik"];
+
+    int Polaznik_ID = (int)ViewData["polaznik_ID"];
+}
+
+<center>
+    <h2>Dodajte detalje za polazni(ka/cu) @polaznik.Ime @polaznik.Prezime</h2>
+
+    <form id="forma">
+        <input type="text" hidden="hidden" name="polaznikID" value="@Model.polaznikID" />
+        <table>
+            <tr>
+                <td><lable><b>Kurs</b></lable></td>
+                <td>
+                    <select name="kursID">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">--------------</option>
+                        @foreach (var x in Model.lista)
+                        {
+                            <option value="@x.KursID">@x.Naziv</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Početak</label>
+                </td>
+                <td>
+                    <input type="date" name="pocetak" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Kraj</label>
+                </td>
+                <td>
+                    <input type="date" name="kraj" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Obnavlja</label>
+                </td>
+                <td>
+                    <select name="obnavlja">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">--------------</option>
+                        <option value="DA">DA</option>
+                        <option value="NE">NE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Broj obnavljanja
+                    </label>
+                </td>
+                <td>
+                    <input type="number" name="broj_obnavljanja" />
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <a id="save" class="btn btn-primary">Snimi</a>
+        <a class="btn btn-default" id="nazad">Nazad</a>
+    </form>
+</center>
+<script>
+    $("#save").click(function (event) {
+
+        var forma = $("#forma");
+
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/DetaljiPolaznikSnimi",
+            data: forma.serialize(),
+            success: function (result) {
+                $("#box").html(result);
+            }
+        });
+    });
+
+    $("#nazad").click(function (event) {
+        $.get("/Ajax/DetaljiPolaznik?id=@Polaznik_ID", function (result) {
+            $("#box").html(result);
+        });
+    });
+</script>

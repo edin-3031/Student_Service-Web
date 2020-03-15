@@ -1,0 +1,106 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajDetaljiPredavanje.css" />
+@model WebApplication1.Models.VM.detaljiPredajeVM
+@{
+    ViewData["Title"] = "DodajDetaljePredavanja";
+    int id_prof = (int)ViewData["id_back_2"];
+}
+
+<center>
+    <h2>Dodaj detalje predavanja</h2>
+
+    <form id="add_form">
+        <table>
+            <input type="text" name="profesor_ID" value="@Model.profesorID" hidden="hidden" />
+            <tr>
+                <td>
+                    <label>
+                        Kurs
+                    </label>
+                </td>
+                <td>
+                    <select name="Kurs_ID">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">-------------------</option>
+                        @foreach (var y in Model.kursevi)
+                        {
+                            <option value="@y.KursID">@y.Naziv</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Datum predavanja
+                    </label>
+                </td>
+                <td>
+                    <input type="date" name="datum" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Održano
+                    </label>
+                </td>
+                <td>
+                    <select name="odrzano">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">-------------------</option>
+                        <option value="DA">DA</option>
+                        <option value="NE">NE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Vrsta
+                    </label>
+                </td>
+                <td>
+                    <select name="vrsta">
+                        <option>---Odaberite---</option>
+                        <option disabled="disabled">-------------------</option>
+                        <option value="Predavanje">Predavanje</option>
+                        <option value="Vježbe">Vježbe</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Opis
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="opis" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <a class="btn btn-primary" id="save_it">Snimi</a>
+        <a class="btn btn-default" id="BackWork">Nazad</a>
+    </form>
+</center>
+<script>
+    $("#save_it").click(function(event){
+        var forma = $("#add_form");
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/SnimiDetaljePredavanja",
+            data: forma.serialize(),
+            success: function (result) {
+                $("#box_predaje").html(result);
+            }
+        });
+    });
+
+    $("#BackWork").click(function (event) {
+            $.get("/Ajax/DetaljiProfesorPredaje?id=@id_prof", function (result) {
+                $("#box_predaje").html(result);
+            });
+        });
+</script>

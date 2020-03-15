@@ -1,0 +1,61 @@
+﻿<link rel="stylesheet" href="~/css/Prikaz/UplataPrikaz.css" />
+<link rel="stylesheet" href="~/css/Poruke_Span.css" />
+
+@using WebApplication1.Controllers
+@{
+    ViewData["Title"] = "ViewUplate";
+
+    List<PrikazUplata> podaci = (List<PrikazUplata>)ViewData["uplata_id"];
+
+    int b = 1;
+
+    string porukaUspjeha = (string)TempData["Success"];
+}
+
+<h1>Uplate</h1>
+
+@if (porukaUspjeha != null)
+{
+    <center>
+        <div id="poruka2">@porukaUspjeha</div>
+    </center>
+    <script>
+            $("#poruka2").slideUp(1);
+            $("#poruka2").slideDown(1500);
+            $("#poruka2").delay(2000);
+            $("#poruka2").slideUp(1500);
+    </script>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>RB</th>
+            <th>Polaznik</th>
+            <th>Svrha</th>
+            <th>Iznos</th>
+            <th>Datum uplate</th>
+            <th>Ovjereno</th>
+            <th>Evidentirao</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in podaci)
+        {
+            <tr>
+                <td>@(b++)</td>
+                <td>@x.Polaznik</td>
+                <td>@x.Svrha</td>
+                <td>@x.Iznos</td>
+                <td>@x.Datum_Uplate</td>
+                <td>@x.Ovjereno</td>
+                <td>@x.Administracija</td>
+                <td><a class="btn btn-info" href="UrediForm?id=@x.UplataID">Uredi</a></td>
+                <td><a class="btn btn-danger" href="UkloniUplatu?TrazenaUplata=@x.UplataID" id="mouse">Ukloni</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a class="btn btn-success" href=/Uplate/DodajUplateForm>Dodaj uplatu</a>
+</center>

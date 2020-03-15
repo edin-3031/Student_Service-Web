@@ -1,0 +1,104 @@
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.deps.json
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.json
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.dev.json
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.dll
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csprojAssemblyReference.cache
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CoreCompileInputs.cache
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfoInputs.cache
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfo.cs
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CopyComplete
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.pdb
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.dll
+C:\Users\Edin\Desktop\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csprojAssemblyReference.cache
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfoInputs.cache
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfo.cs
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.deps.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.dev.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CopyComplete
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.deps.json
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.json
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.dev.json
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.pdb
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csprojAssemblyReference.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CoreCompileInputs.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfoInputs.cache
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfo.cs
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CopyComplete
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.dll
+E:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.pdb
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\libman.json
+C:\Users\Edin\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csprojAssemblyReference.cache
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfoInputs.cache
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfo.cs
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.pdb
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\libman.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.deps.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.dev.json
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.pdb
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\Edin\Desktop\rs 1 seminarski rad final\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CopyComplete
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\libman.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\appsettings.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.deps.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.dev.json
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.pdb
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csprojAssemblyReference.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfoInputs.cache
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfo.cs
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CopyComplete
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.dll
+D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.pdb

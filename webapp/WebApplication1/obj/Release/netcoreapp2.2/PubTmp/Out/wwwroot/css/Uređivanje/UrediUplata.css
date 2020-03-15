@@ -1,0 +1,23 @@
+﻿label, input, select {
+    margin: 3%;
+}
+
+#adminName {
+    position: relative;
+    margin-right: 40px;
+}
+
+#go, #back {
+    width: 30%;
+    margin-right: 3%;
+}
+
+input, select {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 5%;
+}

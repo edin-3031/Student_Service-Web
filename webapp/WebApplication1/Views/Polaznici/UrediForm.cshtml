@@ -1,0 +1,189 @@
+﻿<link rel="stylesheet" href="~/css/Uređivanje/UrediPolaznik.css" />
+@{
+    Polaznik podaci = (Polaznik)ViewData["uredi"];
+}
+
+<h1>Uredi podatke polaznika</h1>
+
+
+<form action="/Polaznici/Uredi">
+    <center>
+        <input type="text" name="id" hidden="hidden" value="@podaci.PolaznikID" />
+        <table>
+            <tr>
+                <td>
+                    <label>Ime</label>
+                </td>
+                <td>
+                    <input id="ime_" type="text" readonly="readonly" name="ime" value="@podaci.Ime"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Prezime</label>
+                </td>
+                <td>
+                    <input id="prezime_" type="text" readonly="readonly" name="prezime" value="@podaci.Prezime" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Mail</label>
+                </td>
+                <td>
+                    <input name="mail" value="@podaci.Mail" />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Datum rođenja</label>
+                </td>
+                <td>
+                    <input type="datetime" name="datum_rodjenja" value="@podaci.Datum_Rodjenja" />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Adresa</label>
+                </td>
+                <td>
+                    <input name="adresa" value="@podaci.Adresa" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Telefon</label>
+                </td>
+                <td>
+                    <input name="telefon" value="@podaci.Telefon" />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Spol</label>
+                </td>
+                <td>
+                    <select name="spol">
+                        <option value="@podaci.Spol">@podaci.Spol</option>
+                        <option disabled="disabled">--</option>
+                        <option value="M">M</option>
+                        <option value="Ž">Ž</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Broj dosijea</label>
+                </td>
+                <td>
+                    <input name="broj_dosijea" value="@podaci.Broj_Dosijea" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Status</label>
+                </td>
+                <td>
+                    <select name="status">
+                        <option value="@podaci.Status">@podaci.Status</option>
+                        <option disabled="disabled">--------------</option>
+                        <option value="Aktivan">Aktivan</option>
+                        <option value="Neaktivan">Neaktivan</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Način studiranja</label>
+                </td>
+                <td>
+                    <select name="nacin_studiranja">
+                        <option value="@podaci.Nacin_Studiranja">@podaci.Nacin_Studiranja</option>
+                        <option disabled="disabled">--------------</option>
+                        <option value="IN-CLASS">IN-CLASS</option>
+                        <option value="DL">DL</option>
+                        <option value="Vanredan">Vanredan</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Upisan semestar</label>
+                </td>
+                <td>
+                    <select name="upisan_semestar">
+                        <option value="@podaci.Upisan_Semestar">@podaci.Upisan_Semestar</option>
+                        <option disabled="disabled">--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Ovjeren semestar</label>
+                </td>
+                <td>
+                    <select name="ovjeren_semestar">
+                        <option value="@podaci.Ovjeren_Semestar">@podaci.Ovjeren_Semestar</option>
+                        <option disabled="disabled">--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Godina upisa</label>
+                </td>
+                <td>
+                    <input type="text" name="godina_upisa" value="@podaci.Godina_Upisa" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Godina studija</label>
+                </td>
+                <td>
+                    <input type="text" name="godina_studija" value="@podaci.Godina_Studija" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Obnavlja godinu</label>
+                </td>
+                <td>
+                    <select name="obnavlja_godinu">
+                        <option value="@podaci.Obnavlja_Godinu">@podaci.Obnavlja_Godinu</option>
+                        <option disabled="disabled">--</option>
+                        <option value="DA">DA</option>
+                        <option value="NE">NE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Prosječna ocjena</label>
+                </td>
+                <td>
+                    <input type="text" name="prosjecna_ocjena" value="@podaci.Prosjecna_Ocjena" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <button id="go" class="btn btn-primary" type="submit">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Polaznici/Prikaz">Nazad</a>
+    </center>
+</form>

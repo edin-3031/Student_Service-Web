@@ -1,0 +1,12 @@
+﻿label, input {
+    margin: 3%;
+}
+
+#save_work, #Back_Work {
+    width: 30%;
+    margin-right: 3%;
+}
+
+input {
+    text-align: center;
+}
