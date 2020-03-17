@@ -160,5 +160,49 @@ namespace WebApplication1.Controllers
             db.SaveChanges();
             return Redirect("/Polaznici/Prikaz");
         }
+        public IActionResult DodajNovog()
+        {
+            return View();
+        }
+        public async Task<IActionResult> SnimiNovog(string Ime, string Mail, string Prezime, string Adresa, string Broj_Dosijea, DateTime Datum_Rodjenja, string Telefon, string Spol, string Status, string Nacin_Studiranja, string Obnavlja_Godinu, float Prosjecna_Ocjena, int Upisan_Semestar, int Ovjeren_Semestar, int Godina_Studija, int Godina_Upisa)
+        {
+            Random rand = new Random();
+
+            Polaznik temp = new Polaznik
+            {
+                Adresa = Adresa,
+                Broj_Dosijea = Broj_Dosijea,
+                Datum_Rodjenja = Datum_Rodjenja,
+                Godina_Studija = Godina_Studija,
+                Godina_Upisa = Godina_Upisa,
+                Ime = Ime,
+                Mail = Mail,
+                Nacin_Studiranja = Nacin_Studiranja,
+                Obnavlja_Godinu = Obnavlja_Godinu,
+                Ovjeren_Semestar = Ovjeren_Semestar,
+                Prezime = Prezime,
+                Prosjecna_Ocjena = Prosjecna_Ocjena,
+                Spol = Spol,
+                Status = Status,
+                Telefon = Telefon,
+                Upisan_Semestar = Upisan_Semestar,
+                KorisničkiNalog_ID = new KorisničkiNalog() { Aktivan = false, KorisnickoIme = Ime + "." + Prezime, Sifra = Ime.Substring(0, 1) + Prezime.Substring(0, 1) + "_" + rand.Next().ToString().Substring(0, 5) }
+
+            };
+
+            if (temp == null)
+                return View("Error");
+
+            db.Add(temp);
+            db.SaveChanges();
+
+            TempData["uspjesno"] = "USPJEŠNO STE DODALI";
+
+            var code = HelperFunctions.CalculateMD5Hash(temp.Broj_Dosijea + temp.Datum_Rodjenja + temp.Mail + temp.KorisničkiNalog_ID.KorisnickoIme);
+            var callbackUrl = HelperFunctions.GetBaseUrl(_httpCA) + $"/KorisnickiNalog/Aktivacija?userID={temp.PolaznikID}&&code={code}";
+            TempData["uspjesno"] = "USPJEŠNO STE DODALI";
+            await _emailSender.sendEMailAsync(temp.Mail, "Mail aktivacija", $"Vaši podaci su: {temp.KorisničkiNalog_ID.KorisnickoIme}, {temp.KorisničkiNalog_ID.Sifra}. Potrebno je još da izvršite aktivaciju Vašeg računa klikom <a href='{callbackUrl.ToString()}'> ovdje</a>");
+            return Redirect("Prikaz");
+        }
     }
 }

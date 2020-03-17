@@ -138,5 +138,49 @@ namespace WebApplication1.Controllers
 
             return Redirect("/Uplate/PrikaziUplate");
         }
+        public IActionResult DodajNovu()
+        {
+            UplataDodajVM vm = new UplataDodajVM
+            {
+                polaznici = db.Polaznik
+                .Select(x => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+                {
+                    Value = x.PolaznikID.ToString(),
+                    Text = x.Ime + " " + x.Prezime
+                }).ToList(),
+                administratori= db.Administracija
+                .Select(x => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+                {
+                    Value = x.AdministracijaID.ToString(),
+                    Text = x.Ime + " " + x.Prezime
+                }).ToList()
+            };
+            return View(vm);
+        }
+        //public IActionResult SnimiNovu(string Svrha, float Iznos, DateTime Datum_Uplate, string Ovjereno, int PolaznikID, int AdministracijaID)
+        //{
+        //    Uplata temp = new Uplata()
+        //    {
+        //        Svrha = Svrha,
+        //        Iznos = Iznos,
+        //        Datum_uplate = Datum_Uplate,
+        //        Ovjereno = Ovjereno,
+        //        Polaznik_ID_FK = PolaznikID,
+        //        Administracija_ID_FK = AdministracijaID
+        //    };
+
+        //    db.Add(temp);
+        //    db.SaveChanges();
+
+            
+
+        //    SmsController tmp = new SmsController(db);
+        //    tmp.SendSms(PolaznikID);
+
+        //    TempData["Success"] = "USPJEŠNO STE DODALI";
+
+
+        //    return Redirect("/Uplate/PrikaziUplate");
+        //}
     }
 }

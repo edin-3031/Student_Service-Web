@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.EF;
+using WebApplication1.Helper;
 using WebApplication1.Models;
+using WebApplication1.Service;
 
 namespace WebApplication1.Controllers
 {
@@ -16,10 +20,14 @@ namespace WebApplication1.Controllers
         }
 
         private readonly MyContext db;
+        private readonly IEmailSender _emailSender;
+        private readonly IHttpContextAccessor _httpCA;
 
-        public ProfesoriController(MyContext _db)
+        public ProfesoriController(MyContext _db, IEmailSender emailSender, IHttpContextAccessor httpCa)
         {
             db = _db;
+            _emailSender = emailSender;
+            _httpCA = httpCa;
         }
 
         public ActionResult Prikaz()
@@ -71,7 +79,7 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public IActionResult Dodaj(string ime, string prezime, string zvanje, string mail, DateTime datum_rodjenja, DateTime datum_zaposlenja, string adresa, string telefon, string spol, int staz, string stalan_zaposlenik, string kancelarija)
+        public async Task<IActionResult> Dodaj(string ime, string prezime, string zvanje, string mail, DateTime datum_rodjenja, DateTime datum_zaposlenja, string adresa, string telefon, string spol, int staz, string stalan_zaposlenik, string kancelarija)
         {
             Profesor temp = new Profesor
             {
@@ -95,6 +103,15 @@ namespace WebApplication1.Controllers
 
             db.Add(temp);
             db.SaveChanges();
+
+            var korisnickiPodaci = db.KorisničkiNalog.FirstOrDefault(x => x.KorisnickiNalogID == 1);
+
+            TempData["uspjeh"] = "USPJEŠNO STE DODALI";
+
+            var code = HelperFunctions.CalculateMD5Hash(temp.Ime + temp.Prezime + temp.Datum_Rodjenja + temp.Mail + korisnickiPodaci.KorisnickoIme);
+            var callbackUrl = HelperFunctions.GetBaseUrl(_httpCA) + $"/KorisnickiNalog/AktivacijaProfesor?profesorID={temp.ProfesorID}&&code={code}";
+
+            await _emailSender.sendEMailAsync(temp.Mail, "Mail aktivacija", $"Vaši podaci su: {korisnickiPodaci.KorisnickoIme}, {korisnickiPodaci.Sifra}. Potrebno je još da izvršite aktivaciju Vašeg računa klikom <a href='{callbackUrl.ToString()}'> ovdje</a>");
 
             TempData["uspjeh"] = "USPJEŠNO STE DODALI";
 
@@ -130,6 +147,49 @@ namespace WebApplication1.Controllers
 
             TempData["uspjeh"] = "USPJEŠNO STE UREDILI";
             return Redirect("/Profesori/Prikaz");
+        }
+        public async Task<IActionResult> SnimiNovog(string Spol, string Zvanje, string Ime, string Prezime, string Mail, string Adresa, string Telefon, int Staz, string Stalan_Zaposlenik, string Kancelarija, DateTime Datum_Rodjenja, DateTime Datum_Zaposlenja)
+        {
+            Profesor temp = new Profesor
+            {
+                Adresa = Adresa,
+                Datum_Rodjenja = Datum_Rodjenja,
+                Datum_Zaposlenja = Datum_Zaposlenja,
+                Ime = Ime,
+                Kancelarija = Kancelarija,
+                Mail = Mail,
+                Prezime = Prezime,
+                Spol = Spol,
+                Stalan_Zaposlenik = Stalan_Zaposlenik,
+                Staz = Staz,
+                Telefon = Telefon,
+                Zvanje = Zvanje,
+                KorisničkiNalog_ID_FK = 1
+            };
+
+            if (temp == null)
+                return View("Error");
+
+            db.Add(temp);
+            db.SaveChanges();
+
+            var korisnickiPodaci = db.KorisničkiNalog.FirstOrDefault(x => x.KorisnickiNalogID == 1);
+
+            TempData["uspjeh"] = "USPJEŠNO STE DODALI";
+
+            var code = HelperFunctions.CalculateMD5Hash(temp.Ime + temp.Prezime + temp.Datum_Rodjenja + temp.Mail + korisnickiPodaci.KorisnickoIme);
+            var callbackUrl = HelperFunctions.GetBaseUrl(_httpCA) + $"/KorisnickiNalog/AktivacijaProfesor?profesorID={temp.ProfesorID}&&code={code}";
+
+            await _emailSender.sendEMailAsync(temp.Mail, "Mail aktivacija", $"Vaši podaci su: {korisnickiPodaci.KorisnickoIme}, {korisnickiPodaci.Sifra}. Potrebno je još da izvršite aktivaciju Vašeg računa klikom <a href='{callbackUrl.ToString()}'> ovdje</a>");
+
+            TempData["uspjeh"] = "USPJEŠNO STE DODALI";
+
+            return Redirect("Prikaz");
+            
+        }
+        public IActionResult DodajNovog()
+        {
+            return View();
         }
     }
 }

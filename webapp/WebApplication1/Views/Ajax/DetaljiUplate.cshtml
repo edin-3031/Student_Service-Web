@@ -1,0 +1,36 @@
+﻿@model WebApplication1.Models.VM.UplataDetaljiVM
+@{
+    ViewData["Title"] = "DetaljiUplate";
+}
+
+
+
+<center style="border-style:groove; margin-top:10px; padding-bottom:10px; border-color:grey">
+    <h2>Detalji</h2>
+    <form asp-controller="Ajax" asp-action="ZatvoriUplate">
+
+        <div class="form-group">
+            <label>Svrha:</label>
+            <input type="text" name="Kurs" value="@Model.Svrha" />
+        </div>
+        <div class="form-group">
+            <label>Datum uplate:</label>
+            <input type="text" value="@Model.Datum_uplate" />
+        </div>
+        <div class="form-group">
+            <label>Iznos:</label>
+            <input type="text" value="@Model.Iznos" />
+        </div>
+        <div class="form-group">
+            <label>Uplatio:</label>
+            <input type="text" value="@Model.Polaznik" />
+        </div>
+        <div class="form-group">
+            <label>Procesirao:</label>
+            <input type="text" value="@Model.Administracija" />
+        </div>
+        <button type="submit" class="btn btn-default" value="ZatvoriUplate">Zatvori</button>
+    </form>
+</center>
+
+

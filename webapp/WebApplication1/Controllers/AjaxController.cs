@@ -19,22 +19,69 @@ namespace WebApplication1.Controllers
             db = _db;
         }
 
-        public IActionResult DetaljiKurs(int SP_id, int kursId)
+        public IActionResult DetaljiKursa(int KursID)
         {
-            detaljiKursVM model = db.Studijski_Program.Where(a => a.Studijski_programID == SP_id).Select(x => new detaljiKursVM()
+            Kurs k = db.Kurs.Find(KursID);
+            Studijski_Program sp = db.Studijski_Program.Find(k.Studijski_Program_ID_FK);
+            KursDetaljiVM vm = new KursDetaljiVM
             {
-                sp_naziv = x.Naziv,
-                akademija = x.Akademija_ID.Naziv,
-                cijena = x.Cijena,
-                trajanje = x.Trajanje,
-                kurs = db.Kurs.Where(a => a.KursID == kursId).Select(o => o.Naziv).SingleOrDefault(),
-            }).SingleOrDefault();
-
-            ViewData["kurs"] = db.Kurs.Where(y => y.KursID == kursId).Select(o => o.Naziv).SingleOrDefault();
-
-            return PartialView(model);
+                Naziv = k.Naziv,
+                ECTS=k.ECTS,
+                Trajanje=k.Trajanje,
+                Trazenost=k.Trazenost,
+                Cijena=k.Cijena,
+                Cilj=k.Cilj,
+                KursID=k.KursID,
+                StudijskiProgram=sp.Naziv
+            };
+            return PartialView(vm);
+        }
+        public IActionResult Zatvori()
+        {
+            return Redirect("/Kursevi/Kursevi");
         }
 
+        public IActionResult DetaljiTesta(int TestID)
+        {
+            Testovi t = db.Testovi.Find(TestID);
+            Kurs k = db.Kurs.Find(t.KursId_FK);
+            TestDetaljiVM vm = new TestDetaljiVM
+            {
+                BrojPitanja=t.Broj_Pitanja,
+                MaxBrBodova=t.Maksimalan_Broj_Bodova,
+                Trajanje=t.Trajanje,
+                TestID=TestID,
+                Kurs=k.Naziv,
+                KursID=k.KursID
+            };
+            return PartialView(vm);
+        }
+        public IActionResult ZatvoriTest()
+        {
+            return Redirect("/Testovi/Testovi");
+        }
+
+        public IActionResult ZatvoriUplate()
+        {
+            return Redirect("/Uplate/PrikaziUplate");
+        }
+
+        public IActionResult DetaljiUplate(int UplataID)
+        {
+            Uplata u = db.Uplata.Include(x => x.Polaznik_ID).Include(x => x.Administracija_ID).Where(x => x.UplataID == UplataID).FirstOrDefault();
+            Polaznik p = db.Polaznik.Find(u.Polaznik_ID_FK);
+            Administracija a = db.Administracija.Find(u.Administracija_ID_FK);
+            UplataDetaljiVM vm = new UplataDetaljiVM
+            {
+                Svrha=u.Svrha,
+                Datum_uplate=u.Datum_uplate,
+                Iznos=u.Iznos,
+                Ovjereno=u.Ovjereno,
+                Polaznik=p.Ime+" "+p.Prezime,
+                Administracija=a.Ime+" "+a.Prezime
+            };
+            return PartialView(vm);
+        }
 
         public IActionResult DetaljiPolaznik(int id)
         {
@@ -301,6 +348,148 @@ namespace WebApplication1.Controllers
 
             return Redirect("/Ajax/DetaljiAdministracija?id=" + admin_id);
         }
+        public IActionResult IzmjenaNaziv(int KursID, string Naziv)
+        {
+            Kurs k = db.Kurs.Find(KursID);
+            k.Naziv = Naziv;
+            try
+            {
+                db.Kurs.Update(k);
+                db.SaveChanges();
+            }
+            catch(Exception)
+            {
+                TempData["greska"] = "GRESKA";
+                return Redirect("/Kursevi/Kursevi");
+            }
+            return RedirectToAction(nameof(DetaljiKursa), new { KursID = KursID });
+        }
+        public IActionResult IzmjenaECTS(int KursID, int ECTS)
+        {
+            Kurs k = db.Kurs.Find(KursID);
+            k.ECTS = ECTS;
+            try
+            {
+                db.Kurs.Update(k);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                TempData["greska"] = "GRESKA";
+                return Redirect("/Kursevi/Kursevi");
+            }
+            return RedirectToAction(nameof(DetaljiKursa), new { KursID = KursID });
+        }
+        public IActionResult IzmjenaCijena(int KursID, float Cijena)
+        {
+            Kurs k = db.Kurs.Find(KursID);
+            k.Cijena = Cijena;
+            try
+            {
+                db.Kurs.Update(k);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                TempData["greska"] = "GRESKA";
+                return Redirect("/Kursevi/Kursevi");
+            }
+            return RedirectToAction(nameof(DetaljiKursa), new { KursID = KursID });
+        }
+        public IActionResult IzmjenaTrajanje(int KursID, int Trajanje)
+        {
+            Kurs k = db.Kurs.Find(KursID);
+            k.Trajanje = Trajanje;
+            try
+            {
+                db.Kurs.Update(k);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                TempData["greska"] = "GRESKA";
+                return Redirect("/Kursevi/Kursevi");
+            }
+            return RedirectToAction(nameof(DetaljiKursa), new { KursID = KursID });
+        }
+        public IActionResult IzmjenaTrazenost(int KursID, string Trazenost)
+        {
+            Kurs k = db.Kurs.Find(KursID);
+            k.Trazenost = Trazenost;
+            try
+            {
+                db.Kurs.Update(k);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                TempData["greska"] = "GRESKA";
+                return Redirect("/Kursevi/Kursevi");
+            }
+            return RedirectToAction(nameof(DetaljiKursa), new { KursID = KursID });
+        }
+        public IActionResult IzmjenaCilj(int KursID, string Cilj)
+        {
+            Kurs k = db.Kurs.Find(KursID);
+            k.Cilj = Cilj;
+            try
+            {
+                db.Kurs.Update(k);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                TempData["greska"] = "GRESKA";
+                return Redirect("/Kursevi/Kursevi");
+            }
+            return RedirectToAction(nameof(DetaljiKursa), new { KursID = KursID });
+        }
 
+        //TESTOVI:
+        public IActionResult IzmjenaBrPitanja(int TestID, int BrPitanja)
+        {
+            Testovi t = db.Testovi.Find(TestID);
+            t.Broj_Pitanja = BrPitanja;
+            try
+            {
+                db.Testovi.Update(t);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction(nameof(DetaljiTesta), new { TestID = TestID });
+            }
+            return RedirectToAction(nameof(DetaljiTesta), new { TestID = TestID });
+        }
+        public IActionResult IzmjenaTrajanjeTesta(int TestID, int Trajanje)
+        {
+            Testovi t = db.Testovi.Find(TestID);
+            t.Trajanje=Trajanje;
+            try
+            {
+                db.Testovi.Update(t);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction(nameof(DetaljiTesta), new { TestID = TestID });
+            }
+            return RedirectToAction(nameof(DetaljiTesta), new { TestID = TestID });
+        }
+        public IActionResult IzmjenaMaxBodova(int TestID, int MaxBodovi)
+        {
+            Testovi t = db.Testovi.Find(TestID);
+            t.Maksimalan_Broj_Bodova = MaxBodovi;
+            try
+            {
+                db.Testovi.Update(t);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction(nameof(DetaljiTesta), new { TestID = TestID });
+            }
+            return RedirectToAction(nameof(DetaljiTesta), new { TestID = TestID });
+        }
     }
 }

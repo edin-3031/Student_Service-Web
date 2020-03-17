@@ -1,0 +1,13 @@
+﻿@model WebApplication1.Models.VM.KursDetaljiVM
+@{
+    ViewData["Title"] = "DetaljiKursa";
+}
+
+<h2>DetaljiKursa</h2>
+<form asp-controller="Ajax" asp-action="">
+    <div class="form-group">
+        <label>Naziv</label>
+        <input type="text" name="Naziv" value="@Model.Naziv" readonly />
+    </div>
+</form>
+

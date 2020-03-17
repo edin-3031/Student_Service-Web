@@ -1,0 +1,59 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodavanjeKurs.css" />
+@model WebApplication1.Models.VM.dodajKursVM
+@{
+    ViewData["Title"] = "DodajKurs";
+    Layout = "_Layout";
+}
+
+<br />
+<br />
+<br />
+<h2 style="text-align:center; font-family:Consolas">Unesite podatke o novom kursu:</h2>
+<br />
+<br />
+<center>
+    <form asp-controller="Kursevi" asp-action="SnimiKurs" method="post" style="font-family:Consolas">
+        <div class="form-group">
+            <label>Naziv:</label>
+            <input type="text" asp-for="Naziv" />
+            <span asp-validation-for="Naziv" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Studijski program:</label>
+            <select name="StudijskiProgramID">
+                @foreach (var x in Model.studijskiProgrami)
+                {
+                    <option value="@x.Value">@x.Text</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label>ECTS:</label>
+            <input type="text" asp-for="ECTS" />
+            <span asp-validation-for="ECTS" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Cijena:</label>
+            <input type="text" asp-for="Cijena" />
+            <span asp-validation-for="Cijena" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Trajanje:</label>
+            <input type="text" asp-for="Trajanje" />
+            <span asp-validation-for="Trajanje" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Trazenost:</label>
+            <input type="text" asp-for="Trazenost" />
+            <span asp-validation-for="Trazenost" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Cilj:</label>
+            <input type="text" asp-for="Cilj" />
+            <span asp-validation-for="Cilj" class="text-danger"></span>
+        </div>
+        <button type="submit" id="go" class="btn btn-primary" value="SnimiKurs">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Kursevi/Kursevi">Nazad</a>
+    </form>
+</center>
+

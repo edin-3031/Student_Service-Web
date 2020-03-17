@@ -1,0 +1,95 @@
+﻿@model WebApplication1.Models.VM.KursDetaljiVM
+@{
+    ViewData["Title"] = "DetaljiKursa";
+}
+
+<center style="border-style:groove; margin-top:10px; padding-bottom:10px; border-color:grey">
+    <h2>Detalji kursa @Model.Naziv</h2>
+
+
+    <form  asp-controller="Ajax" asp-action="Zatvori">
+        <div class="form-group">
+            <label>Naziv:</label>
+            <input type="text" class="izmjenaNaziva" idkursa="@Model.KursID" value="@Model.Naziv" name="Naziv"/>
+        </div>
+        <div class="form-group">
+            <label>ECTS:</label>
+            <input type="text" class="izmjenaECTS" idkursa="@Model.KursID" value="@Model.ECTS"/>
+        </div>
+        <div class="form-group">
+            <label>Studijski program:</label>
+            <input type="text" name="StudijskiProgram" value="@Model.StudijskiProgram" readonly />
+        </div>
+        <div class="form-group">
+            <label>Cijena:</label>
+            <input type="text"  class="izmjenaCijena" idkursa="@Model.KursID" value="@Model.Cijena"/>
+        </div>
+        <div class="form-group">
+            <label>Trajanje:</label>
+            <input type="text"  class="izmjenaTrajanje" idkursa="@Model.KursID" value="@Model.Trajanje" />
+        </div>
+        <div class="form-group">
+            <label>Trazenost:</label>
+            <input type="text"  class="izmjenaTrazenost" idkursa="@Model.KursID" value="@Model.Trazenost" />
+        </div>
+        <div class="form-group">
+            <label>Cilj:</label>
+            <input type="text"  class="izmjenaCilj" idkursa="@Model.KursID" value="@Model.Cilj"/>
+        </div>
+        <button type="submit" class="btn btn-default" value="Zatvori">Zatvori</button>
+    </form>
+</center>
+
+<script>
+    $(function (event) {
+        $(".izmjenaNaziva").change(function (event) {
+            var idkursa = $(this).attr("idkursa");
+            var naziv = $(this).val();
+            $.get("/Ajax/IzmjenaNaziv?KursID=" + parseInt(idkursa)+"&Naziv="+naziv,
+                function (rezultat, status) {
+                    $("#ajaxDiv").html(rezultat);
+                });
+        });
+        $(".izmjenaECTS").change(function (event) {
+            var idkursa = $(this).attr("idkursa");
+            var ects = $(this).val();
+            $.get("/Ajax/IzmjenaECTS?KursID=" + parseInt(idkursa) + "&ECTS=" + ects,
+                function (rezultat, status) {
+                    $("#ajaxDiv").html(rezultat);
+                });
+        });
+        $(".izmjenaCijena").change(function (event) {
+            var idkursa = $(this).attr("idkursa");
+            var cijena = $(this).val();
+            $.get("/Ajax/IzmjenaCijena?KursID=" + parseInt(idkursa) + "&Cijena=" + cijena,
+                function (rezultat, status) {
+                    $("#ajaxDiv").html(rezultat);
+              });
+        });
+        $(".izmjenaTrajanje").change(function (event) {
+            var idkursa = $(this).attr("idkursa");
+            var trajanje = $(this).val();
+            $.get("/Ajax/IzmjenaTrajanje?KursID=" + parseInt(idkursa) + "&Trajanje=" + trajanje,
+                function (rezultat, status) {
+                    $("#ajaxDiv").html(rezultat);
+                });
+        });
+        $(".izmjenaTrazenost").change(function (event) {
+            var idkursa = $(this).attr("idkursa");
+            var trazenost = $(this).val();
+            $.get("/Ajax/IzmjenaTrazenost?KursID=" + parseInt(idkursa) + "&Trazenost=" + trazenost,
+                function (rezultat, status) {
+                    $("#ajaxDiv").html(rezultat);
+                });
+        });
+        $(".izmjenaCilj").change(function (event) {
+            var idkursa = $(this).attr("idkursa");
+            var cilj = $(this).val();
+            $.get("/Ajax/IzmjenaCilj?KursID=" + parseInt(idkursa) + "&Cilj=" + cilj,
+                function (rezultat, status) {
+                    $("#ajaxDiv").html(rezultat);
+                });
+        });
+    });
+</script>
+

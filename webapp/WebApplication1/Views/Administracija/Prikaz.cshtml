@@ -11,7 +11,7 @@
         string porukaUspjeha = (string)TempData["Success"];
 }
 
-<h1>Administracija</h1>
+<h1 style="font-family:Consolas">Administracija</h1>
 
     @if (porukaGreske != null)
     {   <center>
@@ -37,80 +37,84 @@
         </script>
     }
 
-<table class="table">
-    <thead>
-    <th>RB</th>
-    <th>Ime i prezime</th>
-    <th>Mail</th>
-    <th>Telefon</th>
-    <th>Adresa</th>
-    <th>Datum rođenja</th>
-    <th>Datum zaposlenja</th>
-    <th>spol</th>
-    <th>Staž</th>
-    <th>Stalni zaposlenik</th>
-    <th>Kancelarija</th>
-    </thead>
-    <tbody>
-        @foreach (var x in podaci)
-        {
-            <tr>
-                <td>@(++b)</td>
+        <table class="table administracija-table" style="font-family:Consolas">
+            <thead>
+            <th>RB</th>
+            <th>Ime i prezime</th>
+            <th>Mail</th>
+            <th>Telefon</th>
+            <th>Adresa</th>
+            <th>Datum rođenja</th>
+            <th>Datum zaposlenja</th>
+            <th>spol</th>
+            <th>Staž</th>
+            <th>Stalni zaposlenik</th>
+            <th>Kancelarija</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            </thead>
+            <tbody>
+                @foreach (var x in podaci)
+                {
+                    <tr>
+                        <td>@(++b)</td>
 
-                <td>@x.ime @x.prezime</td>
+                        <td>@x.ime @x.prezime</td>
 
-                <td>@x.mail</td>
+                        <td>@x.mail</td>
 
-                <td>@x.telefon</td>
+                        <td>@x.telefon</td>
 
-                <td>@x.adresa</td>
+                        <td>@x.adresa</td>
 
-                <td>@x.datum_rodjenja.Date.Day.@x.datum_rodjenja.Date.Month.@x.datum_rodjenja.Date.Year.</td>
+                        <td>@x.datum_rodjenja.Date.Day.@x.datum_rodjenja.Date.Month.@x.datum_rodjenja.Date.Year.</td>
 
-                <td>@x.datum_zaposlenja.Date.Day.@x.datum_zaposlenja.Date.Month.@x.datum_zaposlenja.Date.Year.</td>
+                        <td>@x.datum_zaposlenja.Date.Day.@x.datum_zaposlenja.Date.Month.@x.datum_zaposlenja.Date.Year.</td>
 
-                <td>@x.spol</td>
+                        <td>@x.spol</td>
 
-                <td>@x.staz</td>
+                        <td>@x.staz</td>
 
-                <td>@x.stalan_zapolsenik</td>
+                        <td>@x.stalan_zapolsenik</td>
 
-                <td>@x.kancelarija</td>
+                        <td>@x.kancelarija</td>
 
-                <td><a href="UrediForm?id=@x.administracija_Id" class="btn btn-info">Uredi</a></td>
+                        <td><a href="UrediForm?id=@x.administracija_Id" class="btn btn-info">Uredi</a></td>
 
-                <td>
-                    <a class="btn btn-warning" id="Detalji__@x.administracija_Id">Detalji</a>
-                    <script>
+                        <td>
+                            <a class="btn btn-warning" id="Detalji__@x.administracija_Id">Detalji</a>
+                            <script>
                     $("#Detalji__@x.administracija_Id").click(function (event) {
                         $.get("/Ajax/DetaljiAdministracija?id=@x.administracija_Id", function (result) {
                             $("#box2").html(result);
                             $("#glavni").css("border","5px solid black");
                         });
                     });
-                    </script>
-                </td>
-                <td>
-                    <a class="btn btn-danger" href="/Administracija/Ukloni?id=@x.administracija_Id" id="brisanje_@x.administracija_Id">Ukloni</a>
-                </td>
-                <td>
-                    <span id="poruka_@x.administracija_Id"></span>
-                </td>
-                <script>
+                            </script>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" href="/Administracija/Ukloni?id=@x.administracija_Id" id="brisanje_@x.administracija_Id">Ukloni</a>
+                        </td>
+                        <td>
+                            <span id="poruka_@x.administracija_Id"></span>
+                        </td>
+                        <script>
                     $("#brisanje_@x.administracija_Id").mouseover(function () {
                         $("#poruka_@x.administracija_Id").html("PRVO UKLONITE DETALJE I IZMIJENITE UPLATE");
                     });
                     $("#brisanje_@x.administracija_Id").mouseleave(function () {
                         $("#poruka_@x.administracija_Id").html("");
                     });
-                </script>
-            </tr>
-        }
-    </tbody>
-</table>
-<center>
-    <a href="DodajForm" class="btn btn-success">Dodaj administraciju</a><br /><br />
-</center>
+                        </script>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <center>
+            @*<a href="DodajForm" class="btn btn-success">Dodaj administraciju</a><br /><br />*@
+            <a href="DodajNovog" class="btn btn-success">Dodaj novog administratora</a><br /><br />
+        </center>
 <div id="glavni">
     <div id="box2">
     </div>

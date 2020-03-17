@@ -84,6 +84,54 @@ namespace WebApplication1.Controllers
 
             return RedirectToAction("About", "Home");
         }
+        public async Task<IActionResult> AktivacijaProfesor(int ProfesorID, string code)
+        {
+            if (code == null)
+            {
+                return RedirectToPage("/Index");
+            }
+            Profesor p = db.Profesor.Where(x => x.ProfesorID == ProfesorID).Include(x => x.KorisničkiNalog_ID).FirstOrDefault();
+            if (p == null)
+            {
+                return NotFound($"Unable to load user with ID '{ProfesorID}'.");
+            }
+            var hashedCode = HelperFunctions.CalculateMD5Hash(p.Ime + p.Prezime + p.Datum_Rodjenja + p.Mail + p.KorisničkiNalog_ID.KorisnickoIme);
+            if (hashedCode.Equals(code))
+            {
+                p.KorisničkiNalog_ID.Aktivan = true;
+                db.SaveChanges();
+                await _emailSender.sendEMailAsync(p.Mail, "Aktivacija korisnickog racuna", $"Uspješno ste aktivirali Vaš račun. Dobrodošli u IT Academy tim.");
+                return Redirect("/Home/Contact");
+            }
+            return RedirectToAction("About", "Home");
+        }
+        public async Task<IActionResult> AktivacijaAdministracija(int AdministracijaID, string code)
+        {
+            if (code == null)
+            {
+                return RedirectToPage("/Index");
+            }
+
+            Administracija a = db.Administracija.Where(x => x.AdministracijaID == AdministracijaID).Include(x => x.KorisničkiNalog_ID).FirstOrDefault();
+
+            if (a == null)
+            {
+                return NotFound($"Unable to load user with ID '{AdministracijaID}'.");
+            }
+
+            var hashedCode = HelperFunctions.CalculateMD5Hash(a.Ime + a.Prezime + a.Datum_Rodjenja + a.Mail + a.KorisničkiNalog_ID.KorisnickoIme);
+
+            if (hashedCode.Equals(code))
+            {
+                a.KorisničkiNalog_ID.Aktivan = true;
+                db.SaveChanges();
+                await _emailSender.sendEMailAsync(a.Mail, "Aktivacija korisnickog racuna", $"Uspješno ste aktivirali Vaš račun. Dobrodošli u IT Academy tim.");
+                return Redirect("/Home/Contact");
+            }
+            
+
+            return RedirectToAction("About", "Home");
+        }
         public IActionResult Logout()
         {
             return RedirectToAction("Index");

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.EF;
 using WebApplication1.Models;
+using WebApplication1.Models.VM;
 
 namespace WebApplication1.Controllers
 {
@@ -23,114 +25,143 @@ namespace WebApplication1.Controllers
             db = _db;
         }
 
-        public ActionResult DodajKurs(int studijskiProgram,string naziv, int ects, float cijena, int trajanje, string trazenost, string cilj)
-        {
 
-            Kurs temp = new Kurs()
+
+        //public IActionResult Uredi(int id, int studijskiProgram, string naziv, int ects, float cijena, int trajanje, string trazenost, string cilj)
+        //{
+        //    Kurs tmp = db.Kurs.Where(x => x.KursID == id).Single();
+
+        //    tmp.Naziv = naziv;
+        //    tmp.Studijski_Program_ID_FK = studijskiProgram;
+        //    tmp.Trajanje = trajanje;
+        //    tmp.Trazenost = trazenost;
+        //    tmp.Cijena = cijena;
+        //    tmp.Cilj = cilj;
+        //    tmp.ECTS = ects;
+
+        //    db.SaveChanges();
+
+        //    TempData["uspjesno"] = "USPJEŠNO STE UREDILI";
+
+        //    return Redirect("/Kursevi/PrikaziKurseve");
+        //}
+        public IActionResult DodajKurs()
+        {
+            dodajKursVM vm = new dodajKursVM
             {
-                Studijski_Program_ID_FK = studijskiProgram,
-                Naziv = naziv,
-                ECTS = ects,
-                Cijena = cijena,
-                Trajanje = trajanje,
-                Trazenost = trazenost,
-                Cilj = cilj
+                studijskiProgrami = db.Studijski_Program
+                .Select(x => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+                {
+                    Value = x.Studijski_programID.ToString(),
+                    Text = x.Naziv
+                }).ToList()
             };
-
-            if (temp == null)
-                return View("Error");
-
-            db.Add(temp);
-            db.SaveChanges();
-
-            TempData["uspjesno"] = "USPJEŠNO STE DODALI";
-
-            return Redirect("PrikaziKurseve");
+           
+            return View(vm);
         }
 
-        public ActionResult DodajKursForm()
+        [HttpPost]
+        public IActionResult SnimiKurs(string Naziv, int StudijskiProgramID, int Trajanje, int ECTS, float Cijena, string Trazenost, string Cilj)
         {
-
-            List<Kurs> podaci = db.Kurs.ToList();
-            ViewData["kurs_id"] = podaci;
-
-            List<Studijski_Program> podaci2 = db.Studijski_Program.ToList();
-            ViewData["SP_id"] = podaci2;
-
-            return View("ViewKurseveForm");
-        }
-
-        public IActionResult PrikaziKurseve()
-        {
-
-            List<PrikazKurseva> podaci = db.Kurs.Select(x => new PrikazKurseva
+            Studijski_Program sp = db.Studijski_Program.Where(x => x.Studijski_programID == StudijskiProgramID).FirstOrDefault();
+            Kurs k = new Kurs
             {
-                KursID=x.KursID,
-                Naziv=x.Naziv,
-                Studijski_program = x.Studijski_Program_ID.Naziv,
-                ECTS = x.ECTS,
-                Cijena = x.Cijena,
-                Trajanje = x.Trajanje,
-                Trazenost = x.Trazenost,
-                Cilj = x.Cilj,
-                SP_id=x.Studijski_Program_ID.Studijski_programID
-            }).ToList();
-
-            ViewData["kurs_id"] = podaci;
-
-            return View("ViewKurseve");
-        }
-
-        public ActionResult UkoniKurs(int TrazeniKurs)
-        {
-            Kurs temp = db.Kurs.Where(x => x.KursID == TrazeniKurs).SingleOrDefault();
-
-            if (temp == null)
-                return View("Error");
-            try
+                Naziv = Naziv,
+                Studijski_Program_ID_FK = StudijskiProgramID,
+                ECTS = ECTS,
+                Trazenost=Trazenost,
+                Cijena=Cijena,
+                Cilj=Cilj,
+                Studijski_Program_ID=sp,
+                Trajanje=Trajanje
+            };
+            if (ModelState.IsValid)
             {
-                db.Remove(temp);
-                db.SaveChanges();
-
-                TempData["uspjesno"] = "USPJEŠNO STE UKLONULI";
-                return Redirect("/Kursevi/PrikaziKurseve");
+                try
+                {
+                    db.Kurs.Add(k);
+                    db.SaveChanges();
+                    TempData["uspjesno"] = "Uspješno ste dodali novi kurs!";
+                }
+                catch (Exception)
+                {
+                    TempData["greska"] = "GRESKA PRILIKOM DODAVANJA";
+                }
+            }else
+            {
+                return NotFound($"Error");
             }
-            catch (Exception)
+            return Redirect("Kursevi");
+        }
+        public IActionResult Kursevi()
+        {
+            KurseviVM vm = new KurseviVM
             {
-                TempData["greska"] = "PRVO UKLONITE KURS IZ DETALJA PROFESORA, POLAZNIKA I TESTA";
-                return Redirect("/Kursevi/PrikaziKurseve");
+                kursevi = db.Kurs
+                .Select(x => new KurseviVM.Row
+                {
+                    KursID = x.KursID,
+                    ECTS = x.ECTS,
+                    Cijena = x.Cijena,
+                    Cilj = x.Cilj,
+                    Naziv = x.Naziv,
+                    Trajanje = x.Trajanje,
+                    Trazenost = x.Trazenost
+                }).ToList()
+            };
+            return View(vm);
+        }
+        public IActionResult UrediKurs(int KursID)
+        {
+            Kurs k = db.Kurs.Where(x => x.KursID == KursID).FirstOrDefault();
+            if (k == null)
+            {
+                return NotFound($"Kurs nije pronadjen"); 
             }
+            Studijski_Program sp = db.Studijski_Program.Where(x => x.Studijski_programID == k.Studijski_Program_ID_FK).FirstOrDefault();
+            UrediKursVM vm = new UrediKursVM
+            {
+                KursID = KursID,
+                Naziv = k.Naziv,
+                ECTS = k.ECTS,
+                Cijena = k.Cijena,
+                Trajanje = k.Trajanje,
+                Trazenost = k.Trazenost,
+                Cilj = k.Cilj,
+                StudijskiProgram=sp.Naziv,
+                StudijskiProgramID=sp.Studijski_programID
+            };
+            return View(vm);
         }
-
-        public IActionResult UrediForm(int id)
+        public IActionResult SnimiUpdate(int KursID, string Naziv,int Trajanje, int ECTS, int StudijskiProgramID, string Trazenost, string Cilj, float Cijena)
         {
-            Kurs tmp = db.Kurs.Where(x => x.KursID == id).SingleOrDefault();
-
-            string nazivSP = db.Kurs.Where(x => x.KursID == id).Select(y => y.Studijski_Program_ID.Naziv).Single();
-
-            ViewData["uredi"] = tmp;
-            ViewData["naziv"] = nazivSP;
-
-            return View();
-        }
-
-        public IActionResult Uredi(int id, int studijskiProgram, string naziv, int ects, float cijena, int trajanje, string trazenost, string cilj)
-        {
-            Kurs tmp = db.Kurs.Where(x => x.KursID == id).Single();
-
-            tmp.Naziv = naziv;
-            tmp.Studijski_Program_ID_FK = studijskiProgram;
-            tmp.Trajanje = trajanje;
-            tmp.Trazenost = trazenost;
-            tmp.Cijena = cijena;
-            tmp.Cilj = cilj;
-            tmp.ECTS = ects;
-
+            Kurs k = db.Kurs.Where(x => x.KursID == KursID).Include(x => x.Studijski_Program_ID).FirstOrDefault();
+            k.Naziv = Naziv;
+            k.Trajanje = Trajanje;
+            k.Trazenost = Trazenost;
+            k.Cijena = Cijena;
+            k.Cilj = Cilj;
+            k.ECTS = ECTS;
+            db.Kurs.Update(k);
             db.SaveChanges();
-
-            TempData["uspjesno"] = "USPJEŠNO STE UREDILI";
-
-            return Redirect("/Kursevi/PrikaziKurseve");
+            return Redirect("/Kursevi/Kursevi");
+        }
+        public IActionResult DeleteKurs(int KursID)
+        {
+            Kurs k = db.Kurs.Find(KursID);
+            
+                try
+                {
+                    db.Kurs.Remove(k);
+                    db.SaveChanges();
+                    TempData["uspjesno"] = "USPJEŠNO STE UKLONULI";
+                    return Redirect("/Kursevi/Kursevi");
+                }
+                catch (Exception)
+                {
+                    TempData["greska"] = "GRESKA";
+                    return Redirect("/Kursevi/Kursevi");
+                }
         }
     }
 }

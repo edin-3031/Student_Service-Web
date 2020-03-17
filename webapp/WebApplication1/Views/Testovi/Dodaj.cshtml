@@ -1,0 +1,43 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodavanjeTest.css" />
+@model WebApplication1.Models.VM.DodajTestVM
+@{
+    ViewData["Title"] = "Dodaj";
+    Layout = "_Layout";
+}
+<br />
+<br />
+<br />
+<h2 style="text-align:center; font-family:Consolas">Unesite podatke o testu:</h2>
+<br />
+<br />
+<center>
+    <form asp-controller="Testovi" asp-action="Snimi" style="font-family:Consolas">
+        <div class="form-group">
+            <label>Odaberite kurs:</label>
+            <select name="KursID">
+                @foreach (var x in Model.kursevi)
+                {
+                    <option value="@x.Value">@x.Text</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Broj pitanja:</label>
+            <input type="text" asp-for="BrojPitanja" />
+            <span asp-validation-for="BrojPitanja" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Trajanje testa:</label>
+            <input type="text" asp-for="Trajanje" />
+            <span asp-validation-for="Trajanje" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Max. broj bodova:</label>
+            <input type="text" asp-for="MaxBrBodova" />
+            <span asp-validation-for="MaxBrBodova" class="text-danger"></span>
+        </div>
+        <button id="go" type="Submit" class="btn btn-primary" value="Snimi">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Testovi/Testovi">Nazad</a>
+    </form>
+</center>
+

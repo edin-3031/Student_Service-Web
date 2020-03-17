@@ -1,0 +1,41 @@
+﻿<link rel="stylesheet" href="~/css/Uređivanje/Pozadina.css" />
+@model WebApplication1.Models.VM.UrediTestVM
+@{
+    ViewData["Title"] = "UrediTest";
+}
+
+<br />
+<br />
+<br />
+<center>
+    <h2 style="font-family:Consolas">Uredite podatke o testu</h2>
+    <br />
+    <br />
+    <form asp-controller="Testovi" asp-action="SnimiIzmjene" style="font-family:Consolas">
+        <input type="hidden" name="TestID" value="@Model.TestID" />
+        <div class="form-group">
+            <label>Kurs:</label>
+            <select name="KursID">
+                @foreach (var x in Model.kursevi)
+                {
+                    <option value="@x.Value">@x.Text</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Broj pitanja:</label>
+            <input type="text" name="BrojPitanja" value="@Model.BrojPitanja" />
+        </div>
+        <div class="form-group">
+            <label>Trajanje:</label>
+            <input type="text" name="Trajanje" value="@Model.Trajanje" />
+        </div>
+        <div class="form-group">
+            <label>Max. broj bodova:</label>
+            <input type="text" name="MaxBrBodova" value="@Model.MaxBrBodova" />
+        </div>
+        <button type="submit" class="btn btn-primary" value="SnimiIzmjene">Snimi</button>
+        <a href="/Testovi/Testovi" class="btn btn-default">Nazad</a>
+    </form>
+</center>
+

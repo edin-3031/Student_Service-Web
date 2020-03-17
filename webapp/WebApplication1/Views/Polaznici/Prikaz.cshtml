@@ -10,7 +10,7 @@
     string porukaUspjeh = (string)TempData["uspjesno"];
 }
 
-<h1>Polaznici</h1>
+<h1 style="text-align:center; font-family:Consolas">Polaznici</h1>
 
 @if (porukaGreska != null)
 {<center>
@@ -36,7 +36,7 @@
     </script>
 }
 
-<table class="table">
+<table class="table polaznici-table" style="font-family:Consolas">
     <thead>
     <th>RB</th>
     <th>Ime i prezime</th>
@@ -52,6 +52,7 @@
     <th>Godina studija</th>
     <th>Obnavlja godinu</th>
     <th>Prosječna ocjena</th>
+    <th></th>
     </thead>
     <tbody>
         @foreach (var x in podaci)
@@ -104,7 +105,8 @@
     </tbody>
 </table>
 <center>
-    <a class="btn btn-success" href="DodajForm">Dodaj polaznika</a><br /><br />
+    @*<a class="btn btn-success" href="DodajForm">Dodaj polaznika</a><br /><br />*@
+    <a class="btn btn-success" href="DodajNovog">Dodaj novog polaznika</a><br /><br />
 </center>
 
 <div id="box">

@@ -1,0 +1,57 @@
+﻿@model WebApplication1.Models.VM.TestDetaljiVM
+@{
+    ViewData["Title"] = "DetaljiTesta";
+}
+
+<center style="border-style:groove; margin-top:10px; padding-bottom:10px; border-color:grey">
+    <h2>Detalji</h2>
+    <form asp-controller="Ajax" asp-action="ZatvoriTest">
+        <input type="hidden" name="TestID" value="@Model.TestID" />
+        <div class="form-group">
+            <label>Kurs:</label>
+            <input type="text" name="Kurs" value="@Model.Kurs" />
+        </div>
+        <div class="form-group">
+            <label>Broj pitanja:</label>
+            <input type="text" class="izmjenaBrPitanja" idtesta="@Model.TestID" name="BrPitanja" value="@Model.BrojPitanja" />
+        </div>
+        <div class="form-group">
+            <label>Trajanje:</label>
+            <input type="text" class="izmjenaTrajanje" idtesta="@Model.TestID" name="Trajanje" value="@Model.Trajanje" />
+        </div>
+        <div class="form-group">
+            <label>Max. broj bodova:</label>
+            <input type="text" class="izmjenaMaxBrBodova" idtesta="@Model.TestID" name="MaxBrBodova" value="@Model.MaxBrBodova" />
+        </div>
+        <button type="submit" class="btn btn-default" value="ZatvoriTest">Zatvori</button>
+    </form>
+</center>
+
+<script>
+    $(function (event) {
+        $(".izmjenaBrPitanja").change(function (event) {
+            var brPitanja = $(this).val();
+            var idtesta = $(this).attr("idtesta");
+            $.get("/Ajax/IzmjenaBrPitanja?TestID=" + parseInt(idtesta) + "&BrPitanja=" + brPitanja,
+                function (rezultat, status) {
+                    $("ajaxDivTestovi").html(rezultat);
+                });
+        });
+        $(".izmjenaTrajanje").change(function (event) {
+            var trajanje = $(this).val();
+            var idtesta = $(this).attr("idtesta");
+            $.get("/Ajax/IzmjenaTrajanjeTesta?TestID=" + parseInt(idtesta) + "&Trajanje=" + trajanje,
+                function (rezultat, status) {
+                    $("ajaxDivTestovi").html(rezultat);
+                });
+        });
+        $(".izmjenaMaxBrBodova").change(function (event) {
+            var maxBodovi = $(this).val();
+            var idtesta = $(this).attr("idtesta");
+            $.get("/Ajax/IzmjenaMaxBodova?TestID=" + parseInt(idtesta) + "&MaxBodovi=" + maxBodovi,
+                function (rezultat, status) {
+                    $("ajaxDivTestovi").html(rezultat);
+                });
+        });
+    });
+</script>

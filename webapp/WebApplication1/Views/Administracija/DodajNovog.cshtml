@@ -1,0 +1,124 @@
+﻿<link rel="stylesheet" href="~/css/Dodavanje/DodajAdministraciju.css" />
+@model WebApplication1.Models.VM.AdministracijaDodajVM
+@{
+    ViewData["Title"] = "DodajNovog";
+}
+
+<h2>Unesite podatke o novom profesoru</h2>
+
+
+<center>
+    <form asp-controller="Administracija" asp-action="SnimiNovog">
+        <table>
+            <tr>
+                <td><label>Ime</label></td>
+                <td><input type="text" asp-for="Ime" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Prezime</label></td>
+                <td>
+                    <input type="text" asp-for="Prezime" />
+                    <span asp-validation-for="Prezime" class="text-danger"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Mail</label></td>
+                <td>
+                    <input type="text" asp-for="Mail" />
+                    <span asp-validation-for="Mail" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Datum rođenja</label></td>
+                <td>
+                    <input type="date" asp-for="Datum_Rodjenja" />
+                    <span asp-validation-for="Datum_Rodjenja" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Datum zaposlenja</label></td>
+                <td>
+                    <input type="date" asp-for="Datum_Zaposlenja" />
+                    <span asp-validation-for="Datum_Zaposlenja" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Adresa</label></td>
+                <td>
+                    <input type="text" asp-for="Adresa" />
+                    <span asp-validation-for="Adresa" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Telefon</label></td>
+                <td>
+                    <input type="text" asp-for="Telefon" />
+                    <span asp-validation-for="Telefon" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Spol</label>
+                    <span asp-validation-for="Spol" class="text-danger"></span>
+                </td>
+                <td>
+                    <select asp-for="Spol" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="M">M</option>
+                    <option value="Ž">Ž</option>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Staž</label></td>
+                <td>
+                    <input type="number" asp-for="Staz" />
+                    <span asp-validation-for="Staz" class="text-danger"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Stalan zaposlenik</label>
+                    <span asp-validation-for="Stalan_Zaposlenik" class="text-danger"></span>
+                </td>
+                <td>
+                    <select asp-for="Stalan_Zaposlenik" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option value="DA">DA</option>
+                    <option value="NE">NE</option>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Kancelarija</label>
+                    <span asp-validation-for="Kancelarija" class="text-danger"></span>
+                </td>
+                <td>
+                    <select asp-for="Kancelarija" />
+                    <option>---Odaberite---</option>
+                    <option disabled="disabled">---------------</option>
+                    <option>Kancelarija 1</option>
+                    <option>Kancelarija 2</option>
+                    <option>Kancelarija 3</option>
+                    <option>Kancelarija 4</option>
+                    <option>Kancelarija 5</option>
+                    <option>Kancelarija 6</option>
+                    <option>Kancelarija 7</option>
+                    <option>Kancelarija 8</option>
+                    <option>Kancelarija 9</option>
+                    <option>Kancelarija 10</option>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        @*<button id="go" type="submit" class="btn btn-primary">Snimi</button>*@
+        <button type="submit" id="go" value="SnimiNovog" class="btn btn-primary">Snimi</button>
+        <a id="back" class="btn btn-default" href="/Administracija/Prikaz">Nazad</a>
+    </form>
+    <br />
+</center>

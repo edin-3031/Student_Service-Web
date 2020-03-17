@@ -5,6 +5,15 @@
     {
       "library": "signalr.js@2.4.0-preview1-20180920-03",
       "destination": "wwwroot/lib/signalr.js/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "@microsoft/signalr@3.1.2",
+      "destination": "wwwroot/lib/signalr/",
+      "files": [
+        "dist/browser/signalr.js",
+        "dist/browser/signalr.min.js"
+      ]
     }
   ]
 }

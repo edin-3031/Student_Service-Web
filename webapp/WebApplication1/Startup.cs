@@ -13,6 +13,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApplication1.EF;
 using WebApplication1.Service;
+using Microsoft.AspNetCore.Owin;
+using Microsoft.AspNetCore.Internal;
+using WebApplication1.Hubs;
+
+
+
+
+//[assembly: OwinStartup(typeof(WebApplication1.Startup))]
+
 
 namespace WebApplication1
 {
@@ -44,6 +53,9 @@ namespace WebApplication1
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDistributedMemoryCache();
             services.AddSession();
+           
+
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,6 +82,17 @@ namespace WebApplication1
                     name: "index",
                     template: "{controller=KorisnickiNalog}/{action=Index}/{id?}");
             });
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<Chat>("/chat");
+            });
+
+            //app.UseEndpoint(endpoints =>
+            //{
+            //    endpoints.MapRazorPages();
+            //    endpoints.MapHub<Chat>("/chat");
+            //});
         }
     }
 }

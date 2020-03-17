@@ -1,0 +1,84 @@
+﻿@model WebApplication1.Models.VM.TestoviVM
+
+<link rel="stylesheet" href="~/css/Prikaz/TestPrikaz.css" />
+<link rel="stylesheet" href="~/css/Poruke_Span.css" />
+
+@{
+    ViewData["Title"] = "Testovi";
+
+    string porukaUspjeh = (string)TempData["uspjesno"];
+
+    string porukaGreska = (string)TempData["greska"];
+}
+
+@if (porukaGreska != null)
+{<center>
+        <div id="poruka">@porukaGreska</div>
+    </center>
+    <script>
+        $("#poruka").slideUp(1);
+        $("#poruka").slideDown(1500);
+        $("#poruka").delay(2000);
+        $("#poruka").slideUp(1500);
+    </script>
+}
+@if (porukaUspjeh != null)
+{
+    <center>
+        <div id="poruka2">@porukaUspjeh</div>
+    </center>
+    <script>
+        $("#poruka2").slideUp(1);
+        $("#poruka2").slideDown(1500);
+        $("#poruka2").delay(2000);
+        $("#poruka2").slideUp(1500);
+    </script>
+}
+
+
+<h2 style="text-align:center; font-family:Consolas">Testovi</h2>
+<br />
+<table class="table tests-table" style="font-family:Consolas">
+    <thead>
+        <tr>
+            <th>Naziv kursa</th>
+            <th>Trajanje testa (min)</th>
+            <th>Broj pitanja</th>
+            <th>Max. broj bodova</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.testovi)
+        {
+            <tr>
+                <td>@x.NazivKursa</td>
+                <td>@x.Trajanje</td>
+                <td>@x.BrojPitanja</td>
+                <td>@x.MaxBodovi</td>
+                <td>
+                    <a href="/Testovi/UrediTest?TestID=@x.TestID" class="btn btn-info">Uredi</a>
+                    <a class="btn btn-warning detalji" idtesta="@x.TestID">Detalji</a>
+                    <script>
+                        $(function (event) {
+                            $(".detalji").click(function (event) {
+                                var id = $(this).attr("idtesta");
+                                $.get("/Ajax/DetaljiTesta?TestID=" + parseInt(id),
+                                    function (rezultat, status) {
+                                        $("#ajaxDivTestovi").html(rezultat);
+                                    });
+                            });
+
+                        });
+                    </script>
+                    <a href="/Testovi/Ukloni?TestID=@x.TestID" class="btn btn-danger">Ukloni</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<center>
+    <a href="/Testovi/Dodaj" class="btn btn-success">Dodaj novi test</a>
+</center>
+<strong id="ajaxDivTestovi"></strong>
+

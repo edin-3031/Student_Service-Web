@@ -5,43 +5,42 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace WebApplication1.Service
 {
     public class EMailSender : IEmailSender
     {
-        public Task sendEMailAsync(string email, string subject, string htmlMessage)
+        public async Task sendEMailAsync(string email, string subject, string htmlMessage)
         {
-            var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("ITAcademy", "itacademynoreply@gmail.com"));
-            message.To.Add(new MailboxAddress(email, email));
+            var message = new MailMessage()
+            {
+                From = new MailAddress("itacademy.noreply1@gmail.com", "IT Akademija"),
+            };
+            message.To.Add(new MailAddress(email, email));
             message.Subject = subject;
 
-            var builder = new BodyBuilder();
+            message.Body = htmlMessage;
+            message.IsBodyHtml = true;
+            message.Priority = MailPriority.High;
 
-            builder.HtmlBody = htmlMessage;
-
-            // builder.Attachments.Add(@"C:\file\data.xlxs");
-
-            message.Body = builder.ToMessageBody();
 
             try
             {
-                var client = new SmtpClient();
+                using (System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587))
+                {
 
-                client.Connect("smtp.gmail.com", 587, false);
-                client.Authenticate("itacademynoreply@gmail.com", "Mostar2019");
-                client.Send(message);
-                client.Disconnect(true);
-
-                Console.WriteLine("Send Mail Success.");
+                    client.Credentials = new NetworkCredential("itacademy.noreply1@gmail.com", "Mostar2019");
+                    client.EnableSsl = true;
+                    await client.SendMailAsync(message);
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Send Mail Failed : " + e.Message);
             }
-            return Task.CompletedTask;
         }
+       
     }
 }

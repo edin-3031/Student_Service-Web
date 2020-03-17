@@ -12,7 +12,7 @@
     string porukaUspjeha = (string)TempData["Success"];
 }
 
-<h1>Uplate</h1>
+<h1 style="text-align:center; font-family:Consolas">Uplate</h1>
 
 @if (porukaUspjeha != null)
 {
@@ -27,7 +27,7 @@
     </script>
 }
 
-<table class="table">
+<table class="table uplate-table" style="font-family:Consolas">
     <thead>
         <tr>
             <th>RB</th>
@@ -37,25 +37,44 @@
             <th>Datum uplate</th>
             <th>Ovjereno</th>
             <th>Evidentirao</th>
+            <th></th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var x in podaci)
         {
-            <tr>
-                <td>@(b++)</td>
-                <td>@x.Polaznik</td>
-                <td>@x.Svrha</td>
-                <td>@x.Iznos</td>
-                <td>@x.Datum_Uplate</td>
-                <td>@x.Ovjereno</td>
-                <td>@x.Administracija</td>
-                <td><a class="btn btn-info" href="UrediForm?id=@x.UplataID">Uredi</a></td>
-                <td><a class="btn btn-danger" href="UkloniUplatu?TrazenaUplata=@x.UplataID" id="mouse">Ukloni</a></td>
-            </tr>
+        <tr>
+            <td>@(b++)</td>
+            <td>@x.Polaznik</td>
+            <td>@x.Svrha</td>
+            <td>@x.Iznos</td>
+            <td>@x.Datum_Uplate</td>
+            <td>@x.Ovjereno</td>
+            <td>@x.Administracija</td>
+            <td><a class="btn btn-info" href="UrediForm?id=@x.UplataID">Uredi</a></td>
+            <td><a class="btn btn-warning detalji" iduplate="@x.UplataID">Detalji</a></td>
+            <script>
+                $(function (event) {
+                    $(".detalji").click(function (event) {
+                        var id = $(this).attr("iduplate");
+                        $.get("/Ajax/DetaljiUplate?UplataID=" + parseInt(id),
+                            function (rezultat, status) {
+                                $("#ajaxDivUplate").html(rezultat);
+                            });
+                    });
+
+                });
+            </script>
+            <td><a class="btn btn-danger" href="UkloniUplatu?TrazenaUplata=@x.UplataID" id="mouse">Ukloni</a></td>
+        </tr>
         }
     </tbody>
 </table>
 <center>
     <a class="btn btn-success" href=/Uplate/DodajUplateForm>Dodaj uplatu</a>
+    
 </center>
+
+<strong id="ajaxDivUplate"></strong>

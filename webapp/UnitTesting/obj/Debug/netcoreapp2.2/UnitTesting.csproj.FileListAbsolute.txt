@@ -102,3 +102,22 @@ D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netc
 D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CopyComplete
 D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.dll
 D:\Fakultet\RS I\Seminarski rad\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.pdb
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.dll
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.Views.pdb
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.deps.json
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.json
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.runtimeconfig.dev.json
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.dll
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\UnitTesting.pdb
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.dll
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\bin\Debug\netcoreapp2.2\WebApplication1.pdb
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csprojAssemblyReference.cache
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.AssemblyInfo.cs
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.csproj.CopyComplete
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.dll
+C:\Users\User\Desktop\seminarski_rad\webapp\UnitTesting\obj\Debug\netcoreapp2.2\UnitTesting.pdb
